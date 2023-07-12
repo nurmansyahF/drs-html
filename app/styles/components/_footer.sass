@@ -1,0 +1,84 @@
+/* Footer */
+.footer
+  padding: 5.5rem 0 3rem
+  background: #032330
+  color: $white
+  &-right
+    width: 100%
+    display: flex
+    gap: rem(110)
+    .row
+      width: 100%
+    .col-lg-5
+      display: flex
+      justify-content: flex-end
+  &-menu
+    display: flex
+    gap: rem(50)
+    .menu-group
+      b
+        display: block
+        width: 100%
+        margin-bottom: rem(24)
+        color: $white
+      ul
+        font-size: rem(14)
+        opacity: .75
+        &.col2
+        li
+          margin-bottom: rem(12)
+          a
+            white-space: nowrap
+    a
+      color: $white
+  &-top
+    margin-bottom: rem(64)
+  &-bottom
+    display: flex
+    justify-content: space-between
+    align-items: center
+    padding-top: rem(40)
+    border-top: 1px solid rgba(255, 255, 255, 0.15)
+    font-size: 14px
+    line-height: 150%
+    .left,
+    .right
+      flex: 0 0 50%
+      max-width: 50%
+    .left
+      display: flex
+      align-items: center
+      gap: rem(24)
+      .cpyright
+        opacity: .50
+    .right
+      display: flex
+      align-items: center
+      justify-content: flex-end
+      gap: rem(40)
+      a
+        opacity: .75
+        color: $white
+        &:hover
+          // text-decoration: none
+          // color: lighten($primary, 10%)
+  &-address
+    max-width: rem(264)
+    & > *:not(:last-child)
+      margin-bottom: rem(24)
+    .contact-item
+      a
+        color: $white
+      small
+        color: $white
+        opacity: .5
+        display: block
+  &-socmed
+    display: flex
+    align-items: center
+    gap: rem(16)
+    a
+      transition: all .3s ease-in-out
+      &:hover
+        transform: translateY(-4px)
+

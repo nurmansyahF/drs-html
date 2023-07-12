@@ -1,0 +1,49 @@
+extends templates/layout.pug
+
+block vars
+  - var activepage = "login";
+
+
+block header
+
+block content
+  .auth-page
+    .auth-page-form
+      .back
+        a.btn-arrow.left(href="home.html") Kembali ke beranda
+      .auth-form
+        a.logo(href='home.html')
+          img(src="images/main-logo-drs.png", alt="img")
+        h1.h2 Selamat datang di portal pelanggan CV. Dima Rama Sakti
+        form(action="customer-page.html")
+          .form-group
+            input.form-control(type="email" placeholder="Masukan alama email")
+          .form-group.pswd
+            input.form-control(type="password" placeholder="Password")
+            span.sh-pwd
+          .form-action
+            button.btn.btn-primary.btn-block(type="login") Login
+      .footer-desktop
+        span ©Dima Rama Sakti, 2023. All Rights Reserved.
+    .auth-page-bg
+      .auth-slider
+        .authSwiper.swiper
+          .swiper-wrapper
+            .swiper-slide(style="background-image: url(images/auth-img-1.jpg)")
+              .content
+                h3 Proyek pengadaan perangkat tablet untuk kontrol stok gudang bahan baku.
+                p Dima Rama Sakti berkontribusi dalam proses pengadaan produk perangkat tablet untuk kebutuhan kontrol stok gudang bahan baku.
+            .swiper-slide(style="background-image: url(images/auth-img-2.jpg)")
+              .content
+                h3 Proyek pengadaan perangkat tablet untuk kontrol stok gudang bahan baku.
+                p Dima Rama Sakti berkontribusi dalam proses pengadaan produk perangkat tablet untuk kebutuhan kontrol stok gudang bahan
+            .swiper-slide(style="background-image: url(images/auth-img-1.jpg)")
+              .content
+                h3 Proyek pengadaan perangkat tablet untuk kontrol stok gudang bahan baku.
+                p Dima Rama Sakti berkontribusi dalam proses pengadaan produk perangkat tablet untuk kebutuhan kontrol stok gudang bahan
+            //- .swiper-slide
+            //-   img.bg(src="images/about-masthead-img.jpg", alt="img")
+            //- .swiper-slide
+            //-   img.bg(src="images/masthead-home-img.jpg", alt="img")
+        .swiper-pagination.wloading
+block footer

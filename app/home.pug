@@ -1,0 +1,217 @@
+extends templates/layout.pug
+
+block vars
+  - var activepage = "home";
+  - var headerType = "alt";
+  -
+    var homecat = [
+      {
+        img : "card-category-thumbnail-1.jpg",
+        title: "Part Mekanis"
+      },
+      {
+        img : "card-category-thumbnail-2.jpg",
+        title: "Kelistrikan"
+      },
+      {
+        img : "card-category-thumbnail-3.jpg",
+        title: "Komponen IT"
+      },
+      {
+        img : "card-category-thumbnail-4.jpg",
+        title: "Peralatan Rumah Tangga"
+      },
+      {
+        img : "card-category-thumbnail-5.jpg",
+        title: "Oli & Pelumas"
+      },
+      {
+        img : "card-category-thumbnail-6.jpg",
+        title: "Sekrup, Baut, Mur"
+      },
+      {
+        img : "card-category-thumbnail-6.jpg",
+        title: "Perkakas"
+      },
+      {
+        img : "card-category-thumbnail-6.jpg",
+        title: "Alat Tulis Kantor"
+      },
+    ]
+
+    var product = [
+      {
+        name: "Baut Mur Putih Full Drat Pack Kecil",
+        price: "2.700",
+        discount: "10",
+        discountedprice: "3.000",
+        img: "home-product-thumbnail-1.jpg",
+        moq: "",
+      },
+      {
+        name: "NTN Deep Groove Ball Bearing 6000 Series (Laher)",
+        price: "19.000",
+        discount: "",
+        discountedprice: "",
+        img: "home-product-thumbnail-2.jpg",
+        moq: "100",
+      },
+      {
+        name: "Baut Mur Putih Full Drat Pack Kecil",
+        price: "2.700",
+        discount: "10",
+        discountedprice: "3.000",
+        img: "home-product-thumbnail-3.jpg",
+        moq: "",
+      },
+      {
+        name: "Baut Mur Putih Full Drat Pack Kecil",
+        price: "2.700",
+        discount: "10",
+        discountedprice: "3.000",
+        img: "home-product-thumbnail-4.jpg",
+        moq: "",
+      },
+      {
+        name: "Baut Mur Putih Full Drat Pack Kecil",
+        price: "2.700",
+        discount: "10",
+        discountedprice: "3.000",
+        img: "home-product-thumbnail-3.jpg",
+        moq: "",
+      },
+      {
+        name: "Baut Mur Putih Full Drat Pack Kecil",
+        price: "2.700",
+        discount: "10",
+        discountedprice: "3.000",
+        img: "home-product-thumbnail-4.jpg",
+        moq: "",
+      },
+    ]
+
+  include templates/dbcontent.pug
+
+
+block content
+  .home
+    section.home-masthead
+      //- .home-masthead-mashteadbg
+      //-   img.bg(src="images/masthead-home-img.jpg", alt="img")
+      .home-masthead-swiper.swiper
+        .homeSwiper
+          .swiper-wrapper
+            .swiper-slide
+              img.bg(src="images/masthead-home-img.jpg", alt="img")
+            .swiper-slide
+              img.bg(src="images/about-masthead-img.jpg", alt="img")
+            .swiper-slide
+              img.bg(src="images/masthead-home-img.jpg", alt="img")
+      .home-masthead-content
+        .container
+          span Selamat datang di CV. Dima Rama Sakti,
+          h1 Partner terbaik untuk kebutuhan <br>teknis dan konstruksi Anda.
+          a.btn.btn-primary(href="#") Lihat produk mekanis
+          .swiper-pagination.wloading
+          .autoplay-progress
+            svg(viewbox='0 0 48 48')
+              circle(cx='24' cy='24' r='20')
+            span
+    section.section.home-category.xl
+      .container
+        .section-title
+          .row
+            .col-md-6
+              h2 Temukan produk berkualitas <br>di setiap kategori.
+              .subdesc
+                p Solusi terbaik untuk kebutuhan Anda dalam satu tempat yang nyaman dan handal.
+            .col-md-6
+              a.btn-arrow(href="#") Lihat semua produk
+        .home-category-wrap
+          .row
+             each item in homecat
+              - var {img,title} = item
+                .col-lg-3.col-md-6
+                  a.card-category(href="#")
+                    .card-category-img
+                      img.bg(src=`images/${img}`, alt="img")
+                    .card-category-name
+                      h4=title
+                      img.icon.svg(src="images/ic-arrow-circle-white.svg" alt="icon")
+
+    section.section.home-aboutus
+      .home-aboutus-bg
+        img.bg(src="images/home-aboutus-bg.jpg", alt="bg")
+      .home-aboutus-content
+        .container
+          .section-title
+            .row
+              .col-md-6
+                h2 Memenuhi kebutuhan Anda dengan keahlian dan dedikasi.
+                .subdesc
+                  p Kami berkomitmen untuk menyediakan solusi pengadaan barang-barang kebutuhan penunjang bisnis Anda. Dengan fokus pada keunggulan, kepuasan pelanggan, dan integritas, kami mengutamakan pelayanan yang profesional, harga yang kompetitif, kualitas terbaik dan pengiriman tepat waktu.
+
+          a.btn-arrow(href="#") Lihat semua produk
+
+    section.section.xl.home-solution
+      .container
+        .section-title
+          .row
+            .col-md-6
+              h2 Menyelesaikan kesulitan proses pengadaan dengan solusi kami.
+        .solution-wrap
+          .row
+            .col-md-4
+              .card-solution
+                b
+                  img.svg(src="images/ic-home-solution-1.svg", alt="icon")
+                  span Jaringan supplier yang luas.
+                span Kami telah menjalin kemitraan dengan jaringan supplier terpercaya di industri, dan memastikan Anda mendapatkan barang dengan kualitas terbaik serta harga kompetitif.
+            .col-md-4
+              .card-solution
+                b
+                  img.svg(src="images/ic-home-solution-2.svg", alt="icon")
+                  span Responsif dan cepat tanggap.
+                span Kami sangat peduli dengan kepuasan pelanggan. Kami siap merespons pertanyaan, memberikan bantuan, dan menangani kebutuhan Anda dengan cepat dan efisien.
+            .col-md-4
+              .card-solution
+                b
+                  img.svg(src="images/ic-home-solution-3.svg", alt="icon")
+                  span Pengiriman tepat waktu.
+                span Kami memahami betapa pentingnya waktu bagi Anda. Komitmen kami untuk mengirimkan pesanan tepat waktu sehingga Anda dapat melanjutkan bisnis tanpa hambatan.
+
+    section.section.xl.home-client
+      .container
+        .section-title
+          .row
+            .col-lg-6
+              h2 Perusahaan yang sudah percaya dan terus bekerja sama dengan kami
+        .client-wrap
+          .row.no-gutter
+            - var n = 1;
+            while n < 9
+              .col-lg-3.col-md-6
+                .client-logo
+                  img(src=`images/client-logo-${n++}.png`, alt="client-logo")
+
+    section.section.xl.home-someproduct
+      .container
+        .section-title
+          .row
+            .col-lg-6
+              h2 Produk terlaris di Dima Rama Sakti.
+              .subdesc
+                p Produk yang paling banyak dibutuhkan oleh customer kami dari berbagai kategori.
+            .col-lg-6
+              .prevnext
+                .prdSwiper-prev
+                .prdSwiper-next
+        .someproduct-wrap.prdSwiper
+          .swiper-wrapper
+            each item in product
+              .swiper-slide
+                +productCard(item)
+          .more.text-center
+            a.btn-arrow(href="#") Lihat produk special offer
+
+

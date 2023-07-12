@@ -1,0 +1,24 @@
+mixin productCard(data)
+	- var {name,price,discount,discountedprice,img,moq} = data
+	a.product-card(href="produk-detail.html")
+		.product-card-img
+			if(img)
+					img.bg(src=`images/${img}`)
+		.product-card-text
+			.product-card-price
+				small Mulai
+				b='Rp'+price
+				if(discount)
+					span.discounted='Rp'+discountedprice
+					span.discount=discount+'%'
+			.product-card-name=name
+			.product-card-bottom
+				.moq
+					if(moq)
+						span MOQ
+						span.qty=moq+'pcs'
+				img.svg.icon-arrow(src="images/ic-arrow-circle-blue.svg", alt="ic")
+
+
+
+

@@ -1,0 +1,31 @@
+extends templates/layout.pug
+
+block vars
+  - var activepage = "not-found";
+
+block header
+
+block content
+  .thanknot(style="background-image: url(../images/bg-404.jpg)")
+    .header
+      .container
+        .header-logo
+          a(href="home.html")
+            img(src="images/zhongxin-logo-white.svg", alt="logo-zhongxin")
+    .content
+      .container
+        .row.no-gutter
+          .col-md-6
+            .box-left
+              .content
+                .section-heading
+                  h1 页面未找到
+                .section-subheading
+                  p 我们找不到您要查看的页面。给您带来不便，我们深表歉意。
+                a.btn.btn-primary(href="home.html") 返回首页
+          .col-md-6
+
+        .footer-copyright
+          span © 2023 - ZhongXin。版权所有。
+
+block footer

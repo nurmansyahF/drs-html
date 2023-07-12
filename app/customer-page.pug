@@ -1,0 +1,491 @@
+extends templates/layout.pug
+
+block vars
+  - var activepage = "customer-page";
+  - var headerType = "alt";
+
+  include templates/dbcontent.pug
+
+block header
+  header.header.usersignin
+    .container
+      .header-main
+        .header-logo
+          a(href="home.html")
+            img(src="images/main-logo-drs.png", alt="logo-drs")
+        .header-menu
+          nav.main-menu
+            .menu-item.has-sub(class=activepage =="home"? "active":"")
+              a(href="produk.html") Produk
+              .submenu.md
+                .submenu-title
+                  b Kategori Produk
+                ul.submenu-list
+                  li
+                    a(href="#") Part Mekanis
+                  li
+                    a(href="#") Kelistrikan
+                  li
+                    a(href="#") Komponen IT
+                  li
+                    a(href="#") Peralatan Rumah Tangga
+                  li
+                    a(href="#") Oli & Pelumas
+                  li
+                    a(href="#") Sekrup, Baut, Mur
+                  li
+                    a(href="#") Perkakas
+                  li
+                    a(href="#") Alat Tulis Kantor
+
+            .menu-item(class=activepage =="tentang-kami"? "active":"")
+              a(href="tentang-kami.html") Tentang Kami
+            .menu-item(class=activepage =="galeri"? "active":"")
+              a(href="galeri.html") Galeri
+            .menu-item(class=activepage =="kishatara"? "active":"")
+              a(href="kishatara.html") KISHATARA
+            .menu-item(class=activepage =="kontak-kami"? "active":"")
+              a(href="kontak-kami.html") Kontak Kami
+            .menu-item(class=activepage =="customer-page"? "active":"")
+              a(href="customer-page") Portal Pelanggan
+        .header-right
+          .header-search
+            form.searchform(action="#")
+              input.form-control(type="text" placeholder="Cari disini...")
+            .sc-trigger
+              img.icon-search.svg(src="images/icon-search.svg", alt="icon")
+          .header-btnauth
+            a(href="login.html")
+              img.svg(src=headerType =="alt"? "images/ic-user-white.svg":"images/ic-user-blue.svg"  , alt="icon")
+              span Login Customer
+          .header-logedinuser
+            .dropdown
+              .ppuser.dropdown-toggle( id="ddUser" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false")
+                img(src="images/pp-user.svg", alt="ppuser")
+              .dropdown-menu(aria-labelledby="dropdownMenuButton")
+                a.dropdown-item(href="login.html") Login
+
+        .mobile-menu
+          span
+          span
+          span
+
+
+
+
+
+
+
+
+
+block content
+  .customerpage
+    section.customerpage-masthead
+      .customerpage-masthead-bg
+        img.bg(src="images/img-hero-customer-page.jpg" alt="img")
+      .customerpage-masthead-content
+        .container
+          .greeting
+            span Halo,&nbsp;
+            | BTPNS
+          h1 Selamat datang di portal pelanggan CV. Dima Rama Sakti
+
+    section.customerpage-proyek.section.xl
+      .container
+        .section-title
+          h2 Daftar proyek BTPNS
+        .proyek-status
+          a.status-tab.active(href="#")
+            img.icon.svg(src="images/icon-status-1.svg", alt='icon')
+            span Semua status
+          a.status-tab(href="#")
+            img.icon.svg(src="images/icon-status-2.svg", alt='icon')
+            span On-Progress
+          a.status-tab(href="#")
+            img.icon.svg(src="images/icon-status-3.svg", alt='icon')
+            span Invoicing
+          a.status-tab(href="#")
+            img.icon.svg(src="images/icon-status-4.svg", alt='icon')
+            span Selesai
+        .proyek-list-wrap
+          .proyek-filter
+            .left
+              .showing
+                span Menampilkan total <b>3 proyek</b>
+            .right
+              .year
+                span Filter tahun:
+                select.select(title="Urutkan Berdasarkan")
+                  option(value="0" selected) Semua
+                  option(value="1") 2020
+                  option(value="2") 2021
+                  option(value="3") 2022
+                  option(value="4") 2023
+          .proyek-item
+            .top
+              .meta
+                .meta-left
+                  a.invc(href="#") PO/20230329/MPL/3140712796
+                  .date 17 Nov 2022
+                .meta-right
+                  .status
+                    .tag.small.ondelivery On-Progress
+                  .history(href="#")
+                    img(src="images/ic-arrow-circle-blue.svg", alt="icon" )
+                    .history-dd
+                      h5 Riwayat Status PO
+                      ul.history-list
+                        li.ondelivery
+                          .date 17 Nov 2022
+                          .title
+                            span On-Progress
+                        //- li
+                        //-   .date 14 Jun 2022
+                        //-   .title
+                        //-     span Invoicing
+                        //-     a(href="#") 07/INV/DRS/VI/2023
+                        //- li.current
+                        //-   .date 16 Jun 2023
+                        //-   .title
+                        //-     span On-Progress
+                        //-     a(href="#") 07/INV/DRS/VI/2023
+              .product
+                .left
+                  .product-photo
+                    img(src="images/product-img.jpg", alt="photo")
+                  .product-name
+                    h3
+                      a(href="#") Proyek Dima Rama Sakti-BTPNS
+                    .qty
+                      span Total produk: <b>3 produk</b>
+                .right
+                  .price-total
+                    small Total
+                    b Rp 23.680.000
+            .mid
+              h4 Daftar produk
+              table
+                thead
+                  tr
+                    th Produk
+                    th.text-right Qty Order
+                    th.text-right Outstanding
+                    th.text-right Delivered
+                    th Status
+                    th Tanggal
+                    th &nbsp;
+                tbody
+                  tr
+                    td
+                      .box-prdct
+                        .photo
+                          img(src="images/product-img.jpg", alt="photo")
+                        .name NTN Deep Groove Ball Bearing 6000 Series (Laher)
+                    td.text-right
+                      span 2,000
+                    td.text-right
+                      span.text-burgundy -1,000
+                    td.text-right
+                      span.text-green 1,000
+                    td
+                      span.tag.small.ondelivery On-Delivery
+                    td
+                      span ETA: 17 Jun 2023
+                    td
+                      span.info(data-toggle="tooltip" data-placement="right" data-original-title="Last update: 14 Jun 2023")
+                        img(src="images/icon-info.png", alt="icon")
+                  tr
+                    td
+                      .box-prdct
+                        .photo
+                          img(src="images/product-img.jpg", alt="photo")
+                        .name NTN Deep Groove Ball Bearing 6000 Series (Laher)
+                    td.text-right
+                      span 2,000
+                    td.text-right
+                      span.text-burgundy 0
+                    td.text-right
+                      span.text-green 1,000
+                    td
+                      span.tag.small.green Selesai
+                    td
+                      span ETA: 17 Jun 2023
+                    td
+                      span.info(data-toggle="tooltip" data-placement="right" data-original-title="Last update: 14 Jun 2023")
+                        img(src="images/icon-info.png", alt="icon")
+                  tr
+                    td
+                      .box-prdct
+                        .photo
+                          img(src="images/product-img.jpg", alt="photo")
+                        .name NTN Deep Groove Ball Bearing 6000 Series (Laher)
+                    td.text-right
+                      span 2,000
+                    td.text-right
+                      span.text-burgundy 0
+                    td.text-right
+                      span.text-green 1,000
+                    td
+                      span.tag.small.green Selesai
+                    td
+                      span ETA: 17 Jun 2023
+                    td
+                      span.info(data-toggle="tooltip" data-placement="right" data-original-title="Last update: 14 Jun 2023")
+                        img(src="images/icon-info.png", alt="icon")
+
+              .btn-wrap
+                a.btn.btn-border(href='#') Download File Detail Proyek
+                a.btn.btn-border(href='#') Download File Bukti Pembayaran
+            .bottom
+              .left
+                small.last-update Last update: 14 Jun 2023
+              .right
+                span.btn.btn-link.excol Lihat detail
+                a.btn.btn-border(href='#') Follow-up proyek
+          .proyek-item
+            .top
+              .meta
+                .meta-left
+                  a.invc(href="#") PO/20230329/MPL/3140712796
+                  .date 17 Nov 2022
+                .meta-right
+                  .status
+                    .tag.small.invoicing Invoicing
+                  .history(href="#")
+                    img(src="images/ic-arrow-circle-blue.svg", alt="icon" )
+                    .history-dd
+                      h5 Riwayat Status PO
+                      ul.history-list
+                        li
+                          .date 17 Nov 2022
+                          .title
+                            span On-Progress
+                        li
+                          .date 14 Jun 2022
+                          .title
+                            span Invoicing
+                            a(href="#") 07/INV/DRS/VI/2023
+                        li.current
+                          .date 16 Jun 2023
+                          .title
+                            span Invoicing
+                            a(href="#") 07/INV/DRS/VI/2023
+
+              .product
+                .left
+                  .product-photo
+                    img(src="images/product-img.jpg", alt="photo")
+                  .product-name
+                    h3
+                      a(href="#") Proyek Dima Rama Sakti-BTPNS
+                    .qty
+                      span Total produk: <b>3 produk</b>
+                .right
+                  .price-total
+                    small Total
+                    b Rp 23.680.000
+            .mid
+              h4 Daftar produk
+              table
+                thead
+                  tr
+                    th Produk
+                    th.text-right Qty Order
+                    th.text-right Outstanding
+                    th.text-right Delivered
+                    th Status
+                    th Tanggal
+                    th &nbsp;
+                tbody
+                  tr
+                    td
+                      .box-prdct
+                        .photo
+                          img(src="images/product-img.jpg", alt="photo")
+                        .name NTN Deep Groove Ball Bearing 6000 Series (Laher)
+                    td.text-right
+                      span 2,000
+                    td.text-right
+                      span.text-burgundy -1,000
+                    td.text-right
+                      span.text-green 1,000
+                    td
+                      span.tag.small.ondelivery On-Delivery
+                    td
+                      span ETA: 17 Jun 2023
+                    td
+                      span.info(data-toggle="tooltip" data-placement="right" data-original-title="Last update: 14 Jun 2023")
+                        img(src="images/icon-info.png", alt="icon")
+                  tr
+                    td
+                      .box-prdct
+                        .photo
+                          img(src="images/product-img.jpg", alt="photo")
+                        .name NTN Deep Groove Ball Bearing 6000 Series (Laher)
+                    td.text-right
+                      span 2,000
+                    td.text-right
+                      span.text-burgundy 0
+                    td.text-right
+                      span.text-green 1,000
+                    td
+                      span.tag.small.green Selesai
+                    td
+                      span ETA: 17 Jun 2023
+                    td
+                      span.info(data-toggle="tooltip" data-placement="right" data-original-title="Last update: 14 Jun 2023")
+                        img(src="images/icon-info.png", alt="icon")
+                  tr
+                    td
+                      .box-prdct
+                        .photo
+                          img(src="images/product-img.jpg", alt="photo")
+                        .name NTN Deep Groove Ball Bearing 6000 Series (Laher)
+                    td.text-right
+                      span 2,000
+                    td.text-right
+                      span.text-burgundy 0
+                    td.text-right
+                      span.text-green 1,000
+                    td
+                      span.tag.small.green Selesai
+                    td
+                      span ETA: 17 Jun 2023
+                    td
+                      span.info(data-toggle="tooltip" data-placement="right" data-original-title="Last update: 14 Jun 2023")
+                        img(src="images/icon-info.png", alt="icon")
+              .btn-wrap
+                a.btn.btn-border(href='#') Download File Detail Proyek
+                a.btn.btn-border(href='#') Download File Bukti Pembayaran
+            .bottom
+              .left
+                small.last-update Last update: 14 Jun 2023
+              .right
+                span.btn.btn-link.excol Lihat detail
+                a.btn.btn-border.disabled(href='#') Follow-up proyek
+          .proyek-item
+            .top
+              .meta
+                .meta-left
+                  a.invc(href="#") PO/20230329/MPL/3140712796
+                  .date 17 Nov 2022
+                .meta-right
+                  .status
+                    .tag.small.green Selesai
+                  .history(href="#")
+                    img(src="images/ic-arrow-circle-blue.svg", alt="icon" )
+                    .history-dd
+                      h5 Riwayat Status PO
+                      ul.history-list
+                        li
+                          .date 17 Nov 2022
+                          .title
+                            span On-Progress
+                        li
+                          .date 14 Jun 2022
+                          .title
+                            span Invoicing
+                            a(href="#") 07/INV/DRS/VI/2023
+                        li
+                          .date 16 Jun 2023
+                          .title
+                            span Invoicing
+                            a(href="#") 07/INV/DRS/VI/2023
+                        li.done
+                          .date 25 Jun 2023
+                          .title
+                            span Selesai
+                            a(href="#") 07/INV/DRS/VI/2023
+              .product
+                .left
+                  .product-photo
+                    img(src="images/product-img.jpg", alt="photo")
+                  .product-name
+                    h3
+                      a(href="#") Proyek Dima Rama Sakti-BTPNS
+                    .qty
+                      span Total produk: <b>3 produk</b>
+                .right
+                  .price-total
+                    small Total
+                    b Rp 23.680.000
+            .mid
+              h4 Daftar produk
+              table
+                thead
+                  tr
+                    th Produk
+                    th.text-right Qty Order
+                    th.text-right Outstanding
+                    th.text-right Delivered
+                    th Status
+                    th Tanggal
+                    th &nbsp;
+                tbody
+                  tr
+                    td
+                      .box-prdct
+                        .photo
+                          img(src="images/product-img.jpg", alt="photo")
+                        .name NTN Deep Groove Ball Bearing 6000 Series (Laher)
+                    td.text-right
+                      span 2,000
+                    td.text-right
+                      span.text-burgundy -1,000
+                    td.text-right
+                      span.text-green 1,000
+                    td
+                      span.tag.small.ondelivery On-Delivery
+                    td
+                      span ETA: 17 Jun 2023
+                    td
+                      span.info(data-toggle="tooltip" data-placement="right" data-original-title="Last update: 14 Jun 2023")
+                        img(src="images/icon-info.png", alt="icon")
+                  tr
+                    td
+                      .box-prdct
+                        .photo
+                          img(src="images/product-img.jpg", alt="photo")
+                        .name NTN Deep Groove Ball Bearing 6000 Series (Laher)
+                    td.text-right
+                      span 2,000
+                    td.text-right
+                      span.text-burgundy 0
+                    td.text-right
+                      span.text-green 1,000
+                    td
+                      span.tag.small.green Selesai
+                    td
+                      span ETA: 17 Jun 2023
+                    td
+                      span.info(data-toggle="tooltip" data-placement="right" data-original-title="Last update: 14 Jun 2023")
+                        img(src="images/icon-info.png", alt="icon")
+                  tr
+                    td
+                      .box-prdct
+                        .photo
+                          img(src="images/product-img.jpg", alt="photo")
+                        .name NTN Deep Groove Ball Bearing 6000 Series (Laher)
+                    td.text-right
+                      span 2,000
+                    td.text-right
+                      span.text-burgundy 0
+                    td.text-right
+                      span.text-green 1,000
+                    td
+                      span.tag.small.green Selesai
+                    td
+                      span ETA: 17 Jun 2023
+                    td
+                      span.info(data-toggle="tooltip" data-placement="right" data-original-title="Last update: 14 Jun 2023")
+                        img(src="images/icon-info.png", alt="icon")
+              .btn-wrap
+                a.btn.btn-border(href='#') Download File Detail Proyek
+                a.btn.btn-border(href='#') Download File Bukti Pembayaran
+            .bottom
+              .left
+                small.last-update Last update: 14 Jun 2023
+              .right
+                span.btn.btn-link.excol Lihat detail
+                a.btn.btn-border.disabled(href='#') Follow-up proyek
+

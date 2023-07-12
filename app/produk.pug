@@ -1,0 +1,212 @@
+extends templates/layout.pug
+
+block vars
+  - var activepage = "produk";
+  - var headerType = "";
+  -
+    var kategori = ["Part Mekanis", "Kelistrikan", "Komponen IT", "Peralatan Rumah tangga", "Oli & Pelumas", "Sekrup,baut,mur", "Perkakas", "Alat Tulis Kantor", "Special Offer"];
+    var product = [
+      {
+        name: "Baut Mur Putih Full Drat Pack Kecil",
+        price: "2.700",
+        discount: "10",
+        discountedprice: "3.000",
+        img: "home-product-thumbnail-1.jpg",
+        moq: "",
+      },
+      {
+        name: "NTN Deep Groove Ball Bearing 6000 Series (Laher)",
+        price: "19.000",
+        discount: "",
+        discountedprice: "",
+        img: "home-product-thumbnail-2.jpg",
+        moq: "100",
+      },
+      {
+        name: "Baut Mur Putih Full Drat Pack Kecil",
+        price: "2.700",
+        discount: "",
+        discountedprice: "3.000",
+        img: "home-product-thumbnail-3.jpg",
+        moq: "",
+      },
+      {
+        name: "Baut Mur Putih Full Drat Pack Kecil",
+        price: "2.700",
+        discount: "",
+        discountedprice: "3.000",
+        img: "home-product-thumbnail-4.jpg",
+        moq: "",
+      },
+      {
+        name: "Baut Mur Putih Full Drat Pack Kecil",
+        price: "2.700",
+        discount: "10",
+        discountedprice: "3.000",
+        img: "home-product-thumbnail-1.jpg",
+        moq: "",
+      },
+      {
+        name: "NTN Deep Groove Ball Bearing 6000 Series (Laher)",
+        price: "19.000",
+        discount: "",
+        discountedprice: "",
+        img: "home-product-thumbnail-2.jpg",
+        moq: "100",
+      },
+      {
+        name: "Baut Mur Putih Full Drat Pack Kecil",
+        price: "2.700",
+        discount: "",
+        discountedprice: "3.000",
+        img: "home-product-thumbnail-3.jpg",
+        moq: "",
+      },
+      {
+        name: "Baut Mur Putih Full Drat Pack Kecil",
+        price: "2.700",
+        discount: "",
+        discountedprice: "3.000",
+        img: "home-product-thumbnail-4.jpg",
+        moq: "",
+      },
+      {
+        name: "Baut Mur Putih Full Drat Pack Kecil",
+        price: "2.700",
+        discount: "10",
+        discountedprice: "3.000",
+        img: "home-product-thumbnail-1.jpg",
+        moq: "",
+      },
+      {
+        name: "NTN Deep Groove Ball Bearing 6000 Series (Laher)",
+        price: "19.000",
+        discount: "",
+        discountedprice: "",
+        img: "home-product-thumbnail-2.jpg",
+        moq: "100",
+      },
+      {
+        name: "Baut Mur Putih Full Drat Pack Kecil",
+        price: "2.700",
+        discount: "",
+        discountedprice: "3.000",
+        img: "home-product-thumbnail-3.jpg",
+        moq: "",
+      },
+      {
+        name: "Baut Mur Putih Full Drat Pack Kecil",
+        price: "2.700",
+        discount: "",
+        discountedprice: "3.000",
+        img: "home-product-thumbnail-4.jpg",
+        moq: "",
+      },
+      {
+        name: "Baut Mur Putih Full Drat Pack Kecil",
+        price: "2.700",
+        discount: "10",
+        discountedprice: "3.000",
+        img: "home-product-thumbnail-1.jpg",
+        moq: "",
+      },
+      {
+        name: "NTN Deep Groove Ball Bearing 6000 Series (Laher)",
+        price: "19.000",
+        discount: "",
+        discountedprice: "",
+        img: "home-product-thumbnail-2.jpg",
+        moq: "100",
+      },
+      {
+        name: "Baut Mur Putih Full Drat Pack Kecil",
+        price: "2.700",
+        discount: "",
+        discountedprice: "3.000",
+        img: "home-product-thumbnail-3.jpg",
+        moq: "",
+      },
+      {
+        name: "Baut Mur Putih Full Drat Pack Kecil",
+        price: "2.700",
+        discount: "",
+        discountedprice: "3.000",
+        img: "home-product-thumbnail-4.jpg",
+        moq: "",
+      },
+      {
+        name: "Baut Mur Putih Full Drat Pack Kecil",
+        price: "2.700",
+        discount: "10",
+        discountedprice: "3.000",
+        img: "home-product-thumbnail-1.jpg",
+        moq: "",
+      },
+      {
+        name: "NTN Deep Groove Ball Bearing 6000 Series (Laher)",
+        price: "19.000",
+        discount: "",
+        discountedprice: "",
+        img: "home-product-thumbnail-2.jpg",
+        moq: "100",
+      },
+      {
+        name: "Baut Mur Putih Full Drat Pack Kecil",
+        price: "2.700",
+        discount: "",
+        discountedprice: "3.000",
+        img: "home-product-thumbnail-3.jpg",
+        moq: "",
+      },
+      {
+        name: "Baut Mur Putih Full Drat Pack Kecil",
+        price: "2.700",
+        discount: "",
+        discountedprice: "3.000",
+        img: "home-product-thumbnail-4.jpg",
+        moq: "",
+      },
+    ]
+
+  include templates/dbcontent.pug
+
+
+block content
+  .produk
+    section.produk-masthead
+      .produk-masthead-bg
+        img.bg(src="images/produk-masthead-img.jpg" alt="img")
+      .produk-masthead-content
+        .container
+          h1 Eksplorasi pilihan produk untuk kebutuhan bisnis Anda
+        .produk-kategori
+          .container
+            .produk-kategori-wrap
+              each item,index in kategori
+                if(index == 0)
+                  a.kategori-item.active(href="#") Semua
+                else
+                  a.kategori-item(href="#")=item
+    section.section.xl.produk-list
+      .container
+        .produk-list-filter
+          .row.justify-content-between
+            .col-lg-3
+              .total
+                span Menampilkan total <b>50 produk</b>
+            .col-lg-5
+              .filter
+                span Urutkan berdasarkan:
+                select.select(title="Urutkan Berdasarkan")
+                  option(value="0") Update terbaru
+                  option(value="1") Harga terendah
+                  option(value="3") Harga tertinggi
+        .produk-wrap
+          .row
+            each item in product
+              .col-lg-3.col-md-6
+                +productCard(item)
+          .more.text-center
+            a.btn-arrow(href="#") Lihat produk special offer
+
+

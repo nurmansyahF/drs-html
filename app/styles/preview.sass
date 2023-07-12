@@ -1,0 +1,187 @@
+$primary      : #075272
+$secondary    : #81323B
+$text         : #4E5E65
+$border       : #075272
+
+@import 'cores/mixin'
+
+.disabled
+  opacity: .5
+  pointer-events: none
+
++responsive(0,1200px)
+  body, html
+    -moz-osx-font-smoothing: grayscale
+    -webkit-font-smoothing: antialiased
+    text-decoration: none
+    font-feature-settings: "kern" 1
+    font-kerning: normal
+    &::-webkit-scrollbar
+      width: 0
+      background-color: rgba(27, 21, 54, 0.1)
+    &::-webkit-scrollbar-track
+      -webkit-box-shadow: inset 0 0 3px rgba(0,0,0,0.2)
+      background-color: rgba(27, 21, 54, 0.1)
+    &::-webkit-scrollbar-thumb
+      background-color: #E05B11
+      border: 0
+
+.preview
+  min-height: 100vh
+  padding: 40px 0
+  display: flex
+  align-items: center
+  justify-content: center
+  font-size: 16px
+  line-height: 24px
+  background-color: #FFF
+  background-image: url(../images/zodiac-acsen.png), url(../images/bg-home-hero.png)
+  background-repeat: no-repeat
+  background-size: 60%, 150%
+  background-position: right bottom, right top
+  position: relative
+
+  .card-wrap
+    min-width: 300px
+    background-color: $primary
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.15)
+    border-radius: 3px
+    overflow: hidden
+    position: relative
+    z-index: 2
+    .card-header
+      padding: 0
+      margin-bottom: 0
+      background-color: transparent
+      border: 0
+    .card-body
+      padding: 0
+      margin: 0
+      background-color: #FFF
+      overflow: hidden
+    .card-label
+      text-align: center
+      text-transform: uppercase
+      background: $primary
+      color: #FFF
+      font-size: 10px
+      line-height: 24px
+      letter-spacing: 5px
+      padding: 7px 20px
+      border-bottom: 1px solid $border
+      font-weight: 600
+    .card-title
+      text-align: center
+      padding: 0
+      border-bottom: 2px solid #232323
+      padding: 20px 0
+      margin: 0
+      background: #FFF
+      img
+        max-width: 220px
+
+    .card-list
+      padding: 0
+      margin: 0
+      list-style: none
+      background-color: #FFF
+      &> .card-item
+        width: 100%
+        position: relative
+        margin: 0
+        &.has-sub
+          cursor: pointer
+          &> a
+            pointer-events: none
+            cursor: pointer
+          &> a:after
+            content: ""
+            display: block
+            width: 1.5rem
+            height: 1.5rem
+            position: absolute
+            top: calc(50% - 0.75rem)
+            right: 1rem
+            background: url(../images/ic-carret-up.svg) no-repeat
+            transform: rotate(180deg)
+            background-size: contain
+            background-position: center
+        &> a
+          display: block
+          color: $text
+          padding: 15px 20px
+          width: 100%
+          background-color: transparent
+          border-bottom: 1px solid $border
+          font-weight: 500
+          transition: all .5s
+          position: relative
+          &:before
+            content: ""
+            display: block
+            width: 0
+            height: 100%
+            position: absolute
+            top: 0
+            left: 0
+            background: $primary
+            z-index: 1
+            opacity: 0
+            transition: all .3s
+          span
+            position: relative
+            z-index: 2
+          i
+            float: right
+            line-height: 24px
+            transform: rotate(-90deg)
+            transition: transform .3s
+        &:hover > a
+          color: $primary
+          text-decoration: none
+          &:before
+            width: 100%
+            opacity: 0.2
+          i
+            transform: rotate(0)
+        &.open > .card-sub-list
+          padding: 10px 0
+          border-bottom: 1px solid #e2e2e2
+          &> .card-item
+            max-height: 99px
+            padding: 0 10px
+            opacity: 1
+            visibility: visible
+        &.has-child
+          &> a
+            pointer-events: none
+
+      .card-sub-list
+        padding: 0
+        margin: 0
+        list-style: none
+        background-color: #C5AF8A
+        transition: all .3s
+        &> .card-item
+          width: 100%
+          padding: 0 10px
+          max-height: 0
+          padding: 0
+          opacity: 0
+          visibility: hidden
+          transition: max-height .5s, opacity .5s, padding .5s
+          &> a
+            padding: 10px 10px
+            display: block
+            color: #FFF
+            width: 100%
+            border: 1px solid transparent
+            background-color: transparent
+            border: 0
+            transition: all .5s
+          &:hover
+            &> a
+              background-color: #9D7534
+              text-decoration: none
+
+

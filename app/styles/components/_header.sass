@@ -1,0 +1,322 @@
+/* Header */
+.header
+  background: $white
+  position: fixed
+  top: 0
+  left: 0
+  width: 100%
+  z-index: 999
+  border-bottom: 1px solid #E6E8E9  //#E6E8E9
+  & > .container
+  &-main
+    width: 100%
+    display: flex
+    align-items: center
+    padding: rem(24) 0
+    transition: all .3s ease-in-out
+  &-logo
+    margin-right: rem(64)
+    img
+      width: auto
+      height: rem(48)
+  &-menu
+    .main-menu
+      display: flex
+      align-items: center
+      gap: rem(24)
+      .menu-item
+        position: relative
+        a
+          position: relative
+          z-index: 5
+        &.has-sub
+          position: relative
+          display: flex
+          align-items: center
+          gap: 8px
+          &:after
+            content: ""
+            width: rem(16)
+            height: rem(16)
+            background-image: url(../images/ic-carret-down-blue.svg)
+            background-repeat: no-repeat
+            background-position: center
+            display: inline-flex
+            align-self: center
+            transition: all .3s ease-in-out
+          &:hover
+            &:after
+              transform: rotate(-180deg)
+            .submenu
+              opacity: 1
+              visibility: visible
+        &:hover,
+        &.active
+          cursor: pointer
+          & > a
+            text-decoration: none
+            color: $primary
+          &:before
+            content: ""
+            width: 100%
+            height: rem(61)
+            position: absolute
+            top: 0
+            left: 0
+            border-bottom: 2px solid $primary
+            transition: all .3s ease-in-out
+
+
+  &-right
+    display: flex
+    align-items: center
+    margin-left: auto
+    gap: rem(24)
+    .header-logedinuser
+      display: none
+    .header-btnauth
+      padding: rem(8) rem(16)
+      border: 1px solid $primary
+      background: $white
+      display: flex
+      align-items: center
+      width: 100%
+      gap: rem(8)
+      &:hover
+        text-decoration: none
+        background: $primary
+        color: $white
+        .svg
+          path
+            fill: $white
+      img,
+      .svg
+        width: rem(20)
+        height: rem(20)
+
+
+  &-search
+    min-width: rem(20)
+    // // display: flex
+    // align-items: center
+    position: relative
+    .searchform
+      max-width: 0
+      opacity: 0
+      visibility: visible
+      margin: 0
+      .form-control
+        border: 0
+        padding: 0
+        border-bottom: 1px solid $primary
+        // background: transparent
+        width: 100%
+
+    .sc-trigger
+      position: absolute
+      display: block
+      top: rem(8)
+      right: rem(8)
+      width: rem(20)
+      height: rem(20)
+      z-index: 5
+      &:hover
+        cursor: pointer
+    .icon-search
+    &.show
+      .searchform
+        width: 100%
+        max-width: rem(264)
+        opacity: 1
+        visibility: visible
+      .form-control
+        padding: rem(12)
+  &.header-alt
+    background: transparent
+    border-bottom: 1px solid rgba(230, 232, 233, .25) //#E6E8E9
+    .header
+      &-menu
+        .main-menu
+          .menu-item
+            a
+              color: $white
+            &.has-sub
+              &:after
+                background-image: url(../images/ic-carret-down-white.svg)
+                background-repeat: no-repeat
+                background-position: center
+            &:hover,
+            &.active
+              &:before
+                border-color: #FFF
+          .submenu
+            a
+              color: $slate
+              &:hover
+                color: $primary
+
+      &-right
+        .header-btnauth
+          border: 1px solid $white
+          background: rgba(255, 255, 255, 0.10)
+          color: $white
+          .svg
+            margin-right: rem(8)
+          &:hover
+            text-decoration: none
+            background: $white
+            color: $primary !important
+            border-color: $primary
+            .svg
+              path
+                fill: $primary
+  &.fixed
+    background: $white
+    .header
+      &-main
+        padding: rem(16) 0
+      &-menu
+        .main-menu
+          .menu-item
+            a
+              color: $slate
+            &.has-sub
+              &:after
+                background-image: url(../images/ic-carret-down-blue.svg)
+                background-repeat: no-repeat
+                background-position: center
+            &:hover
+              &:after
+                height: rem(61)
+            &:hover,
+            &.active
+              &:before
+                height: rem(53)
+      &-right
+        .header-btnauth
+          padding: rem(8) rem(16)
+          border: 1px solid $primary
+          background: $white
+          a
+            color: $primary
+          .svg
+            path:last-child
+              fill: $primary
+        .icon-search
+          path:last-child
+            fill: $primary
+    &.header-alt
+      border-color: $light
+      .header-menu
+        .main-menu
+          .menu-item
+            &:hover,
+            &.active
+              &:before
+                border-color: $primary
+      .header
+        &-right
+          .header-btnauth
+            color: $primary
+  .submenu
+    padding: rem(24)
+    background: $white
+    position: absolute
+    left: 0
+    top: calc(100% + #{rem(50)})
+    transition: all .3s ease-in-out
+    opacity: 0
+    visibility: hidden
+    box-shadow: 0px 10px 24px 0px rgba(25, 32, 34, 0.15)
+    &:before
+      content: ""
+      width: 0
+      height: 0
+      border-style: solid
+      border-width: 0 10px 10px 10px
+      border-color: transparent transparent #ffffff transparent
+      position: absolute
+      top: -10px
+      left: rem(24)
+    &.md
+      width: rem(584)
+    &-title
+      padding-bottom: rem(16)
+      margin-bottom: rem(16)
+      border-bottom: 1px dashed $light
+    &-list
+      column-count: 2
+      column-gap: rem(16)
+      li
+        padding: rem(8) 0
+        a
+          position: relative
+          color: $slate
+          &:after
+            content: ""
+            width: rem(20)
+            height: rem(20)
+            position: absolute
+            top: 0
+            left: calc(100% + #{rem(8)})
+            background: url(../images/ic-arrow-right-long-blue.svg) no-repeat
+            background-size: contain
+            background-position: center
+            transition: all .3s ease-in-out
+            opacity: 0
+            visibility: hidden
+        &:hover
+          a
+            color: $primary
+            text-decoration: none
+            &:after
+              left: calc(100% + #{rem(10)})
+              opacity: 1
+              visibility: visible
+  &.usersignin
+    .header
+      &-right
+        .header-logedinuser
+          display: block
+        .header-btnauth
+          display: none
+
+
+body.hovered-submenu
+  .header-alt
+    background: $white
+    .header
+      &-menu
+        .main-menu
+          .menu-item
+            & > a
+              color: $primary
+            &.has-sub
+              &:after
+                content: ""
+                width: rem(16)
+                height: rem(16)
+                background-image: url(../images/ic-carret-down-blue.svg)
+                background-repeat: no-repeat
+                background-position: center
+      &-right
+        .header-btnauth
+          padding: rem(8) rem(16)
+          border: 1px solid $primary
+          background: $white
+          a
+            display: flex
+            align-items: center
+            width: 100%
+            gap: rem(8)
+            color: $primary
+            &:hover
+              text-decoration: none
+            img,
+            .svg
+              width: rem(20)
+              height: rem(20)
+              path
+                fill: $primary
+
+

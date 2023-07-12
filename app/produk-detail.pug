@@ -1,0 +1,169 @@
+extends templates/layout.pug
+
+block vars
+  - var activepage = "produk";
+  - var headerType = "";
+  -
+    var product = [
+        {
+          name: "Baut Mur Putih Full Drat Pack Kecil",
+          price: "2.700",
+          discount: "10",
+          discountedprice: "3.000",
+          img: "home-product-thumbnail-1.jpg",
+          moq: "",
+        },
+        {
+          name: "NTN Deep Groove Ball Bearing 6000 Series (Laher)",
+          price: "19.000",
+          discount: "",
+          discountedprice: "",
+          img: "home-product-thumbnail-2.jpg",
+          moq: "100",
+        },
+        {
+          name: "Baut Mur Putih Full Drat Pack Kecil",
+          price: "2.700",
+          discount: "10",
+          discountedprice: "3.000",
+          img: "home-product-thumbnail-3.jpg",
+          moq: "",
+        },
+        {
+          name: "Baut Mur Putih Full Drat Pack Kecil",
+          price: "2.700",
+          discount: "10",
+          discountedprice: "3.000",
+          img: "home-product-thumbnail-4.jpg",
+          moq: "",
+        },
+      ]
+
+
+  include templates/dbcontent.pug
+
+
+block content
+  .produk.produk-detail
+    .container
+      section.section.xl.produk-detail-top
+        .row
+          .col-lg-6
+            .produk-detail-photo
+              .photo-thumbnail
+                .prev-sliderV
+                  img(src="images/ic-carret-down-blue.svg", alt="icon")
+                .sliderV
+                  .swiper-wrapper
+                    .swiper-slide
+                      img(src="images/home-product-thumbnail-1.jpg", alt="img")
+                    .swiper-slide
+                      img(src="images/home-product-thumbnail-2.jpg", alt="img")
+                    .swiper-slide
+                      img(src="images/home-product-thumbnail-3.jpg", alt="img")
+                .next-sliderV
+                  img(src="images/ic-carret-down-blue.svg", alt="icon")
+              .box-img
+                img.bg(src="images/img-produk-detail.jpg", alt="img")
+          .col-lg-6
+            .produk-detail-info
+              .tag Part Mekanis
+              h1 NTN Deep Groove Ball Bearing 6000 Series (Laher)
+              .desc NTN Deep Groove Ball Bearing 6000 Series (Laher) merupakan solusi sempurna untuk kebutuhan bearing dalam berbagai aplikasi industri. Dibuat oleh merek terkemuka NTN, bearing seri 6000 ini menawarkan performa optimal, keandalan yang tinggi, dan daya tahan yang luar biasa.
+              hr
+              .moq-list
+                .moq-item
+                  small MOQ &nbsp;
+                    span 100pcs
+                  .price Rp 68.000
+                .moq-item
+                  small MOQ &nbsp;
+                    span 500pcs
+                  .price Rp 63.000
+                .moq-item
+                  small MOQ &nbsp;
+                    span 1000pcs
+                  .price.red Hubungi Kami
+                small.moq-notes *Harga tertera adalah harga satuan pcs
+              a.btn.btn-primary.btn-block(href="#") Pesan produk ini
+
+    section.section.xl.produk-detail-desc
+      .container
+        .row.justify-content-between
+          .col-lg-7
+            .desc-left
+              article
+                h4 Deskripsi
+                p NTN Deep Groove Ball Bearing 6000 Series (Laher) merupakan solusi sempurna untuk kebutuhan bearing dalam berbagai aplikasi industri. Dibuat oleh merek terkemuka NTN, bearing seri 6000 ini menawarkan performa optimal, keandalan yang tinggi, dan daya tahan yang luar biasa.
+                h4 Fitur Utama
+                ul
+                  li Kualitas Tinggi: Bearing seri 6000 diproduksi dengan standar kualitas yang ketat menggunakan bahan berkualitas tinggi dan teknologi produksi canggih. Ini memastikan keandalan dan ketahanan yang tinggi bahkan dalam kondisi operasional yang paling menuntut.
+                  li Desain Deep Groove Ball: Dengan desain deep groove ball, bearing ini dapat menahan beban radial dan aksial dengan baik. Ini memungkinkan untuk penerapan dalam berbagai sistem dan peralatan.
+                  li Presisi dan Kelancaran: Bearing 6000 series ditandai dengan presisi tinggi dalam dimensi dan toleransi. Hal ini memungkinkan gerakan yang lancar, minim gesekan, dan efisiensi yang tinggi dalam operasi mesin.
+                h4 Keunggulan
+                ol
+                  li Daya Tahan yang Tinggi: Dibangun untuk menghadapi kondisi operasional yang berat, bearing seri 6000 ini menunjukkan daya tahan yang luar biasa terhadap beban statis dan dinamis, suhu ekstrem, dan kondisi lingkungan yang keras.
+                  li Performa Optimal: Desain dan teknologi canggih pada bearing ini memastikan pengoperasian yang optimal dengan kebisingan rendah, vibrasi minim, dan efisiensi tinggi. Ini berkontribusi pada performa keseluruhan sistem yang lebih baik.
+                  li Aplikasi yang Luas: Bearing 6000 series ini sangat serbaguna dan dapat digunakan dalam berbagai industri, termasuk otomotif, manufaktur, konstruksi, pertanian, dan banyak lagi. Ini cocok untuk aplikasi seperti motor listrik, pompa, mesin produksi, dan peralatan otomatisasi.
+                h4 Spesifikasi Teknis
+                ul
+                  li Seri: 6000
+                  li Jenis Bearing: Deep Groove Ball Bearing
+                  li Diameter Dalam (ID): 10mm
+                  li Diameter Luar (OD): 26mm
+                  li Ketebalan: 8mm
+                  li Bahan: Baja Chrome
+                  li Lubrikasi: Pelumas Minyak
+                  li Klasifikasi Presisi: ABEC-3
+              a.btn-arrow(href="#") Download detail spesifikasi
+          .col-lg-5
+            .desc-right
+              h3 Pesan produk ini melalui:
+              .ecommerce-list
+                a.ecommerce-item(href="#" target="_blannk")
+                  img(src="images/ecommerce-logo-1.svg", alt="ecommerce-logo")
+                a.ecommerce-item(href="#" target="_blannk")
+                  img(src="images/ecommerce-logo-2.svg", alt="ecommerce-logo")
+                a.ecommerce-item(href="#" target="_blannk")
+                  img(src="images/ecommerce-logo-3.svg", alt="ecommerce-logo")
+                a.ecommerce-item(href="#" target="_blannk")
+                  img(src="images/ecommerce-logo-4.svg", alt="ecommerce-logo")
+              span.or atau
+              h3 Isi form request quotation ini:
+              form.quotation-form(action="#")
+                .form-group
+                  label Nama
+                  input.form-control(type="text" placeholder="Isi nama Anda di sini")
+                .form-group
+                  label Nama perusahaan
+                  input.form-control(type="text" placeholder="Isi nama perusahaan di sini")
+                .form-group
+                  label Alamat email
+                  input.form-control(type="email" placeholder="Isi alamat email di sini")
+                .form-group
+                  label Nomor HP
+                  input.form-control(type="text" placeholder="Nomor HP")
+                  small.notes Diusahakan terhubung dengan WhatsApp
+                .form-group
+                  label Produk
+                  input.form-control(type="text" value="NTN Deep Groove Ball Bearing 6000 Series (Laher)" disabled)
+                .form-group.pcs
+                  label Jumlah kebutuhan
+                  input.form-control(type="text" placeholder="Isi jumlah kebutuhan")
+                .form-group
+                  label Pesan
+                  textarea.form-control(placeholder="Tulis pesan terkait kebutuhan produk" rows="5")
+                .form-action
+                  button.btn.btn-primary.btn-block(type="submit") Kirim request
+
+    section.section.xl.home-someproduct
+      .container
+        .section-title
+          .row
+            .col-lg-6
+              h2 Produk terkait
+        .someproduct-wrap
+          .row
+            each item in product
+              .col-lg-3.col-md-6
+                +productCard(item)

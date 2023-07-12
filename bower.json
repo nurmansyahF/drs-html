@@ -1,0 +1,19 @@
+{
+  "name": "Nurmansyah starter kit",
+  "description": "",
+  "main": "",
+  "authors": [
+    "Nurmansyah"
+  ],
+  "license": "MIT",
+  "moduleType": [],
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "app/plugins",
+    "test",
+    "tests"
+  ]
+}

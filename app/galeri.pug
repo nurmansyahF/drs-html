@@ -1,0 +1,165 @@
+extends templates/layout.pug
+
+block vars
+  - var activepage = "galeri";
+  - var headerType = "";
+  -
+    var homecat = [
+      {
+        img : "card-category-thumbnail-1.jpg",
+        title: "Part Mekanis"
+      },
+      {
+        img : "card-category-thumbnail-2.jpg",
+        title: "Kelistrikan"
+      },
+      {
+        img : "card-category-thumbnail-3.jpg",
+        title: "Komponen IT"
+      },
+      {
+        img : "card-category-thumbnail-4.jpg",
+        title: "Peralatan Rumah Tangga"
+      },
+      {
+        img : "card-category-thumbnail-5.jpg",
+        title: "Oli & Pelumas"
+      },
+      {
+        img : "card-category-thumbnail-6.jpg",
+        title: "Sekrup, Baut, Mur"
+      },
+      {
+        img : "card-category-thumbnail-6.jpg",
+        title: "Perkakas"
+      },
+      {
+        img : "card-category-thumbnail-6.jpg",
+        title: "Alat Tulis Kantor"
+      },
+    ]
+
+    var product = [
+      {
+        name: "Baut Mur Putih Full Drat Pack Kecil",
+        price: "2.700",
+        discount: "10",
+        discountedprice: "3.000",
+        img: "home-product-thumbnail-1.jpg",
+        moq: "",
+      },
+      {
+        name: "NTN Deep Groove Ball Bearing 6000 Series (Laher)",
+        price: "19.000",
+        discount: "",
+        discountedprice: "",
+        img: "home-product-thumbnail-2.jpg",
+        moq: "100",
+      },
+      {
+        name: "Baut Mur Putih Full Drat Pack Kecil",
+        price: "2.700",
+        discount: "10",
+        discountedprice: "3.000",
+        img: "home-product-thumbnail-3.jpg",
+        moq: "",
+      },
+      {
+        name: "Baut Mur Putih Full Drat Pack Kecil",
+        price: "2.700",
+        discount: "10",
+        discountedprice: "3.000",
+        img: "home-product-thumbnail-4.jpg",
+        moq: "",
+      },
+    ]
+
+  include templates/dbcontent.pug
+
+
+block content
+  .galeri
+    .container
+      .row.justify-content-center
+        .col-lg-11
+          section.section.xl.galeri-page
+            .section-title
+              .tag Galeri
+              h1 Galeri proyek terbaik
+              .subdesc
+                p Telusuri galeri terkait hasil proyek-proyek terbaik yang pernah kami tangani.
+            .galeri-wrapper.grid-masonry
+              .grid-sizer
+              - var n = 1;
+              while n < 13
+                if(n == 1)
+                  .grid-item.dw(data-toggle="modal" data-target="#modalDetail")
+                    img(src=`images/galeri/img-galeri-${n++}.jpg`, alt="galeri-img")
+                    .content
+                      h3 Proyek instalasi solar panel
+                      p Proyek instalasi solar panel, Dima Rama Sakti berkontribusi dalam proses pengadaan produk solar panel bertipe XXXX
+                else if(n == 5)
+                  .grid-item.dw(data-toggle="modal" data-target="#modalDetail")
+                    img(src=`images/galeri/img-galeri-${n++}.jpg`, alt="galeri-img")
+                    .content
+                      h3 Proyek instalasi solar panel
+                      p Proyek instalasi solar panel, Dima Rama Sakti berkontribusi dalam proses pengadaan produk solar panel bertipe XXXX
+                else if(n == 7)
+                  .grid-item.dw(data-toggle="modal" data-target="#modalDetail")
+                    img(src=`images/galeri/img-galeri-${n++}.jpg`, alt="galeri-img")
+                    .content
+                      h3 Proyek instalasi solar panel
+                      p Proyek instalasi solar panel, Dima Rama Sakti berkontribusi dalam proses pengadaan produk solar panel bertipe XXXX
+                else if(n == 8)
+                  .grid-item.dw(data-toggle="modal" data-target="#modalDetail")
+                    img(src=`images/galeri/img-galeri-${n++}.jpg`, alt="galeri-img")
+                    .content
+                      h3 Proyek instalasi solar panel
+                      p Proyek instalasi solar panel, Dima Rama Sakti berkontribusi dalam proses pengadaan produk solar panel bertipe XXXX
+                else
+                  .grid-item(data-toggle="modal" data-target="#modalDetail")
+                    img(src=`images/galeri/img-galeri-${n++}.jpg`, alt="galeri-img")
+                    .content
+                      h3 Proyek instalasi solar panel
+                      p Proyek instalasi solar panel, Dima Rama Sakti berkontribusi dalam proses pengadaan produk solar panel bertipe XXXX
+
+block modal
+  #modalDetail.modal.fade.modal-galeri(tabindex='-1' role='dialog' aria-labelledby='exampleModalLabel' aria-hidden='true')
+    .modal-dialog.modal-fluid.modal-dialog-centered(role='document')
+      .modal-content
+        a.close(data-dismiss="modal" aria-label="close")
+          img.svg(src="images/ic-cross.svg", alt="icon")
+        .container
+          .row
+            .col-lg-7
+              .slider
+                .swiper-wrapper
+                  .swiper-slide
+                    .box-img
+                      img.bg(src="images/galeri/img-galeri-5.jpg", alt="img")
+
+                  .swiper-slide
+                    .box-img
+                      img.bg(src="images/galeri/img-galeri-6.jpg", alt="img")
+
+                  .swiper-slide
+                    .box-img
+                      img.bg(src="images/galeri/img-galeri-7.jpg", alt="img")
+                .navigation
+                  .prev-slider
+                  .next-slider
+
+
+            //- .swiper-slide.box-img
+            //-   img.bg(src="images/galeri/img-galeri-5.jpg", alt="img")
+            .col-lg-5
+              .description
+                h2 Proyek instalasi solar panel
+                article
+                  p Dalam proyek ini, salah satu tugas utama kami adalah mencari produk solar panel terbaik untuk memastikan kualitas dan performa yang optimal. Komitmen kami terhadap keunggulan kualitas mengarahkan kami untuk melakukan riset yang mendalam dan kerjasama dengan produsen solar panel terkemuka. Kami memilih produk solar panel yang memiliki efisiensi tinggi, daya tahan yang baik, dan performa yang handal dalam jangka panjang.
+
+                  p Dalam proses pemilihan produk solar panel, kami juga mempertimbangkan faktor-faktor seperti harga yang kompetitif, keandalan pasokan, serta dukungan purna jual yang baik. Hal ini kami lakukan agar klien kami dapat mendapatkan investasi yang bernilai dan hasil yang maksimal dari sistem panel surya mereka.
+
+
+
+

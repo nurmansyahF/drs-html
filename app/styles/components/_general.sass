@@ -1,0 +1,358 @@
+/* General */
+
+.col2
+  column-count: 2
+  column-gap: rem(24)
+
+.tooltip
+  padding: rem(4) rem(8)
+  background: rgba(25, 32, 34, 0.9)
+  color: $white
+  font-size: 14px
+  line-height: 150%
+
+.section
+  &.xl
+    padding: rem(80) 0
+  &.md
+    padding: rem(64) 0
+  &.sm
+    padding: rem(40) 0
+  &-title
+    margin-bottom: rem(48)
+    h1,
+    h2
+      color: $dark
+      margin-bottom: rem(8)
+    .subdesc
+      color: $slate
+
+.text-center
+  text-align: center
+  &.more
+    margin-top: rem(40)
+.text-right
+  text-align: right
+.btn
+  padding: rem(12) rem(24)
+  color: $white
+  text-align: center
+  transition: all .3s ease-in-out
+  border: 0
+  outline: none
+  box-shadow: none
+  display: inline-block
+  &:hover
+    text-decoration: none
+
+  &-primary
+    background: $primary
+    &:hover
+      color: $white
+      background: darken($primary, 5%)
+  &-arrow
+    color: $primary
+    padding-right: rem(28)
+    padding-bottom: rem(8)
+    position: relative
+    border-bottom: 1px solid $primary
+    transition: all .3s ease-in-out
+    &:after
+      content: ""
+      width: rem(20)
+      height: rem(20)
+      background: url(../images/ic-arrow-right-long-blue.svg)
+      background-repeat: no-repeat
+      background-size: contain
+      background-position: center
+      position: absolute
+      top: 2px
+      right: 0
+      transition: all .3s ease-in-out
+    &:hover
+      color: $primary
+      text-decoration: none
+      &:after
+        transform: translateX(4px)
+    &.left
+      padding-right: 0
+      padding-left: rem(28)
+      &:after
+        display: none
+      &:before
+        content: ""
+        width: rem(20)
+        height: rem(20)
+        background: url(../images/ic-arrow-right-long-blue.svg)
+        background-repeat: no-repeat
+        background-size: contain
+        background-position: center
+        position: absolute
+        top: 2px
+        left: 0
+        transition: all .3s ease-in-out
+        transform: rotate(-180deg)
+      &:hover
+        &:before
+        transform: translateX(-4px)
+  &-border
+    padding: rem(8) rem(16)
+    border: 1px solid $primary
+    background: $white
+    color: $primary
+    &:hover
+      background: $primary
+      color: $white
+  &-link
+    color: $primary
+    &:hover
+      text-decoration: underline
+  &-block
+    display: block
+    width: 100%
+  &.disabled
+    border: 1px solid $smoke
+    background: #F1F3F3
+    backdrop-filter: blur(5px)
+    pointer-events: none
+    color: $smoke
+button.btn
+  &:hover,
+  &:focus,
+  &:visited
+    outline: none !important
+    box-shadow: none !important
+
+.tag
+  font-size: 14px
+  line-height: 150%
+  color: $burgundy
+  padding: 2px 14px
+  border: 1px solid rgba(129, 50, 59, 0.50)
+  border-radius: 50px
+  background: #F8EDEE
+  display: inline-flex
+  margin-bottom: 8px
+  &.small
+    padding: 0 8px
+  &.ondelivery
+    color: rgba(20, 115, 184, 1)
+    border-color: rgba(20, 115, 184, 1)
+    background: #E8F9FD
+  &.green
+    color: #17B814
+    border-color: #17B814
+    background: #E8FDE8
+  &.invoicing
+    color: #B86314
+    border-color: #B86314
+    background: #FDF2E8
+
+// Product Card
+.product-card
+  max-width: rem(302)
+  border: 1px solid $light
+  transition: all .3s ease-in-out
+  text-decoration: none !important
+  display: block
+  &-img
+    +imgBg(100% 0 0)
+  &-text
+    padding: rem(16)
+    background: $white
+  &-price
+    display: flex
+    align-items: center
+    gap: 4px
+    small
+      font-size: 14px
+      line-height: 21px
+      color: $primary
+    b
+      +font-500
+      color: $primary
+    .discounted
+      font-size: 14px
+      line-height: 21px
+      color: $slate
+      text-decoration: line-through
+    .discount
+      font-size: 12px
+      line-height: 18px
+      height: 18px
+      padding: 0 4px
+      background: #FF5C5C
+      border-radius: 6px
+      color: $white
+  &-name
+    color: $dark
+    margin-bottom: rem(24)
+    min-height: rem(48)
+    display: block
+    &:hover
+      color: $primary
+      text-decoration: none
+  &-bottom
+    display: flex
+    align-items: center
+    justify-content: space-between
+    .moq
+      font-size: 14px
+      line-height: 21px
+      span
+        color: $muted
+        padding-right: 4px
+      .qty
+        color: $primary
+    .icon-arrow
+      width: rem(24)
+      height: rem(24)
+  &:hover
+    border: 1px solid $primary
+    box-shadow: 0px 15px 35px 0px rgba(0, 0, 0, 0.08), 0px 0px 4px 0px rgba(0, 0, 0, 0.04)
+    .product-card
+      &-name
+        color: $primary
+      &-bottom
+        .svg
+          background: url(../images/ic-arrow-circle-blue-flled.svg)
+          background-size: contain
+          background-repeat: no-repeat
+          path
+            fill: transparent
+
+.text
+  &-burgundy
+    color: $burgundy
+  &-green
+    color: rgba(23, 184, 20, 1)
+
+// CTA
+.section-cta
+  background: $burgundy
+  color: $white
+  padding: 4rem 5rem
+  text-align: center
+  .cta
+    &-title
+      opacity: .75
+    &-link
+      color: $white
+      font-size: 2.25rem
+      line-height: 120%
+      +font-500
+      text-decoration: none
+      padding-bottom: .5rem
+      border-bottom: 1px solid transparent
+      transition: all .3s ease-in-out
+      .icon
+        width: 2.5rem
+        height: 2.5rem
+        object-fit: contain
+        object-position: center
+        display: inline-flex
+        margin-left: .5rem
+        transition: all .3s ease-in-out
+      &:hover
+        text-decoration: none
+        border-bottom: 1px solid $white
+        .icon
+          transform: translateX(#{rem(10)})
+
+.autoplay-progress
+	position: absolute
+	right: 16px
+	bottom: 16px
+	z-index: 10
+	width: 48px
+	height: 48px
+	display: flex
+	align-items: center
+	justify-content: center
+	font-weight: bold
+	// color: var(--swiper-theme-color)
+  z-index: 5
+
+.autoplay-progress
+	svg
+		--progress: 0
+		position: absolute
+		left: 0
+		top: 0px
+		z-index: 10
+		width: 40px
+		height: 40px
+		stroke-width: 4px
+		stroke: var(--swiper-theme-color)
+		fill: none
+		stroke-dashoffset: calc(125.6 * (1 - var(--progress)))
+		stroke-dasharray: 125.6
+		transform: rotate(-90deg)
+
+.swiper-pagination-bullet
+  position: relative
+  svg
+    --progress: 0
+    display: block
+    position: absolute
+    top: rem(-16)
+    left: rem(-16)
+    width: rem(40)
+    height: rem(40)
+    fill: none
+    stroke: $white
+    stroke-dashoffset: calc(125.6 * (1 - var(--progress)))
+    stroke-dasharray: 125.6
+    transform: rotate(-90deg)
+    display: none
+  &.swiper-pagination-bullet-active
+    svg
+      display: block
+
+.modal
+  &-dialog
+    &.modal-fluid
+      max-width: 100%
+
+.modal-backdrop
+  &.bg-gallery
+    background: #032330
+    opacity: 1
+
+// Slider
+.box-slider
+  // width: 100%
+  // overflow: hidden
+  // position: relative
+.slider
+  .navigation
+    position: absolute
+    top: calc(50% - #{rem(24)})
+    left: 0
+    right: 0
+    width: 100%
+    z-index: 3
+    display: flex
+    justify-content: space-between
+    .prev-slider,
+    .next-slider
+      width: rem(48)
+      height: rem(48)
+      background-color: $white
+      background-image: url(../images/ic-arrow-right-long-blue.svg)
+      background-size: rem(24)
+      background-position: center
+      background-repeat: no-repeat
+      border-radius: 50px
+      &:not(.swiper-button-disabled)
+        &:hover
+          cursor: pointer
+      &.swiper-button-disabled
+        opacity: .3
+    .prev-slider
+      margin-left: rem(-12)
+      transform: rotate(-180deg)
+    .next-slider
+      margin-right: rem(-12)
+
+

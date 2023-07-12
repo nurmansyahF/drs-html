@@ -1,0 +1,1093 @@
+/* Contents */
+
+// Home
+.home
+  &-masthead
+    position: relative
+    height: 80vh
+    &:before
+      content: ""
+      width: 100%
+      height: 100%
+      position: absolute
+      top: 0
+      left: 0
+      background: linear-gradient(0deg, rgba(2, 32, 45, 0.30) 0%, rgba(2, 32, 45, 0.30) 100%)
+      z-index: 3
+    &-mashteadbg,
+      height: 100%
+      +imgBg(53% 0 0)
+    &-swiper
+      height: 100%
+      .swiper-slide
+        width: 100%
+        height: 100%
+        +imgBg(53% 0 0)
+
+    &-content
+      position: absolute
+      top: 0
+      left: 0
+      width: 100%
+      height: 100%
+      z-index: 4
+      display: flex
+      align-items: flex-end
+      padding-bottom: rem(64)
+      color: $white
+      span
+        display: block
+        margin-bottom: rem(4)
+      h1
+        margin-bottom: rem(40)
+
+
+  &-category
+    .section-title
+      padding-top: rem(48)
+      border-top: 1px solid $burgundy
+      .row
+        align-items: flex-end
+        .col-md-6:last-child
+          display: flex
+          justify-content: flex-end
+    &-wrap
+      margin-bottom: rem(-24)
+      .col-lg-3
+        margin-bottom: rem(24)
+
+      .card-category
+        width: 100%
+        display: block
+        position: relative
+        transition: all .3s ease-in-out
+        overflow: hidden
+        &-img
+          transition: all .3s ease-in-out
+          &:after
+            content: ""
+            width: 100%
+            height: 100%
+            position: absolute
+            top: 0
+            left: 0
+            background: linear-gradient(359deg, rgba(2, 32, 45, 0.50) 0%, rgba(2, 32, 45, 0.00) 100%)
+            z-index: 2
+            transition: all .3s ease-in-out
+          .bg
+            transition: all .3s ease-in-out
+          +imgBg(83.331% 0 0)
+
+        &-name
+          position: absolute
+          left: 0
+          bottom: 0
+          padding: rem(24)
+          width: 100%
+          display: flex
+          justify-content: space-between
+          align-items: flex-end
+          z-index: 3
+          h4
+            +font-400
+            margin-bottom: 0
+            color: $white
+          .icon
+            width: rem(24)
+            height: rem(24)
+            // transition: all .3s ease-in-out
+
+        &:hover
+          .card-category
+            &-img
+              &:after
+                opacity: .75
+              .bg
+                transform: scale(1.2)
+            &-name
+              .icon
+                background: url(../images/ic-arrow-circle-white-filled.svg)
+                background-size: rem(20)
+                background-position: center
+                background-repeat: no-repeat
+                path
+                  fill: transparent
+
+  &-aboutus
+    position: relative
+    &-bg
+      +imgBg(32.201% 0 0)
+      &:after
+        content: ""
+        width: 100%
+        height: 100%
+        position: absolute
+        top: 0
+        left: 0
+        background: linear-gradient(82deg, rgba(0, 0, 0, 0.50) 0%, rgba(0, 0, 0, 0.00) 51.93%)
+    &-content
+      position: absolute
+      top: 0
+      left: 0
+      width: 100%
+      height: 100%
+      z-index: 3
+      padding: rem(64) 0
+      .container
+        height: 100%
+        display: flex
+        flex-direction: column
+        justify-content: space-between
+      .section-title
+        h2
+          color: $white
+
+        .subdesc
+          color: $white
+          opacity: .75
+      .btn-arrow
+        max-width: max-content
+        color: $white
+        border-bottom: 1px solid $white
+        &:after
+          background: url(../images/ic-arrow-right-long.svg)
+          background-repeat: no-repeat
+          background-size: contain
+          background-position: center
+        &:hover
+          border-color: $white
+
+  &-solution
+    background: #9CC9CE
+    .card-solution
+      border-top: 1px solid rgba(31, 31, 31, 0.25)
+      padding-top: rem(24)
+      b
+        color: $dark
+        padding-right: 4px
+        .svg
+          width: rem(24)
+          height: rem(24)
+          display: inline-flex
+          margin-right: rem(8)
+  &-client
+    .client
+      &-wrap
+        .col-lg-3
+          border-right: 1px solid rgba(27, 21, 54, 0.1)
+          border-top: 1px solid rgba(27, 21, 54, 0.1)
+          &:nth-child(4n)
+            border-right: 0
+          &:nth-child(-n+4)
+            border-top: 0
+    .client-logo
+      padding: rem(40)
+      img
+        width: auto
+        height: rem(64)
+        margin: 0 auto
+        object-fit: contain
+        object-position: center
+
+  &-someproduct
+    background: #F7FCFC
+    .prevnext
+      display: flex
+      gap: rem(16)
+      justify-content: flex-end
+      align-items: flex-end
+      height: 100%
+      .prdSwiper-next,
+      .prdSwiper-prev
+        width: rem(48)
+        height: rem(48)
+        border: 1px solid $primary
+        background-color: $white
+        background-image: url(../images/ic-arrow-right-long-blue.svg)
+        background-position: center
+        background-repeat: no-repeat
+        background-size: rem(24)
+        display: block
+        border-radius: 100px
+        &.swiper-button-disabled
+          opacity: .5
+        &:hover
+          cursor: pointer
+      .prdSwiper-prev
+        transform: rotate(-180deg)
+
+    .section-title
+      padding-top: rem(48)
+      border-top: 1px solid $primary
+    .more
+      text-align: center
+      margin-top: rem(48)
+
+
+// Produk
+.produk
+  padding-top: rem(98)
+  &-masthead
+    position: relative
+    &:before
+      content: ""
+      width: 100%
+      height: 100%
+      position: absolute
+      top: 0
+      left: 0
+      background: linear-gradient(0deg, rgba(2, 32, 45, 0.30) 0%, rgba(2, 32, 45, 0.30) 100%)
+      z-index: 3
+    &-bg
+      height: 100%
+      +imgBg(33.4% 0 0)
+    &-content
+      position: absolute
+      top: 0
+      left: 0
+      width: 100%
+      height: 100%
+      z-index: 4
+      display: flex
+      align-items: center
+      h1
+        color: $white
+        margin-bottom: 0
+        +font-500
+        max-width: rem(846)
+        margin: 0 auto
+        text-align: center
+  &-kategori
+    position: absolute
+    bottom: rem(28)
+    left: 0
+    width: 100%
+    &-wrap
+      width: 100%
+      display: flex
+      align-items: center
+      gap: 8px
+      .kategori-item
+        padding: rem(6) rem(12)
+        +font-500
+        background: rgba(255, 255, 255, 0.25)
+        border: 1px solid $muted
+        z-index: 3
+        border-radius: 50px
+        color: $white
+        position: relative
+        transition: all .3s ease-in-out
+        &.active
+          padding-left: rem(26)
+          background: $white
+          border-color: $white
+          color: $primary
+          &:before
+            content: ""
+            width: 6px
+            height: 6px
+            border-radius: 50px
+            position: absolute
+            top: rem(16)
+            left: rem(12)
+            background: $primary
+        &:hover
+          text-decoration: none
+          background: $white
+          border-color: $white
+          color: $primary
+    &-bg
+      +imgBg(53% 0 0)
+  &-list
+    &-filter
+      margin-bottom: rem(40)
+      b
+        +font-600
+        color: $dark
+      .filter
+        display: flex
+        align-items: center
+        justify-content: flex-end
+        gap: 8px
+        span
+          flex: 0 0 rem(158)
+          max-width: rem(158)
+        .select
+          flex: 0 0 rem(240)
+          max-width: rem(240)
+          button.btn
+            padding: rem(6) rem(16)
+            border: 1px solid $light
+            border-radius: 50px
+            background: $white
+            color: $dark
+        .bootstrap-select
+          .dropdown-menu.show
+            min-width: auto
+            width: 100%
+            max-width: rem(240)
+  &-wrap
+    margin-bottom: rem(-24)
+    .col-lg-3
+      margin-bottom: rem(24)
+
+.produk-detail
+  &-top
+
+  &-photo
+    position: relative
+    .photo-thumbnail
+      position: absolute
+      top: calc(50% - #{rem(130)})
+      left: rem(24)
+      width: rem(50)
+      // height: rem(300)
+      display: flex
+      flex-direction: column
+      align-items: center
+      gap: rem(12)
+      z-index: 3
+      .swiper-wrapper
+        gap: rem(12)
+        flex-direction: column
+      .swiper-slide
+        width: rem(48)
+        height: rem(48)
+      .prev-sliderV,
+      .next-sliderV
+        width: rem(24)
+        height: rem(24)
+        .svg,
+        img
+          width: rem(24)
+          height: rem(24)
+      .prev-sliderV
+        transform: rotate(-180deg)
+    .box-img
+      +imgBg(100% 0 0)
+  &-info
+    padding-left: rem(56)
+    h1
+      color: $dark
+      font-size: rem(28)
+      line-height: 120%
+      margin-bottom: rem(24)
+    hr
+      margin: rem(24) 0
+      background: transparent
+      border-top: 1px dashed $light
+    .moq-list
+      margin-bottom: rem(24)
+      .moq-item
+        padding: rem(12) rem(16)
+        border: 1px solid $light
+        display: flex
+        align-items: center
+        gap: 8px
+        &:not(:last-of-type)
+          margin-bottom: rem(12)
+        small
+          span
+            color: $primary
+        .price
+          color: $primary
+          font-size: rem(24)
+          line-height: 150%
+          +font-500
+          &.red
+            color: $burgundy
+  &-desc
+    position: relative
+    border-top: 1px solid $light
+    &:after
+      content: ""
+      width: 43.468%
+      height: 100%
+      background: linear-gradient(180deg, #F7FCFC 0%, rgba(247, 252, 252, 0.00) 100%)
+      position: absolute
+      top: 0
+      right: 0
+    .container
+      position: relative
+      z-index: 5
+    .row
+      .col-lg-5
+    .desc-right
+      padding-left: rem(80)
+      h3
+        +font-600
+        color: $dark
+        font-size: rem(20)
+        line-height: 120%
+        margin-bottom: rem(16)
+      .ecommerce
+        &-list
+        &-item
+          padding: rem(12) rem(24)
+          background: $white
+          border: 1px solid $light
+          display: flex
+          position: relative
+          transition: all .3s ease-in-out
+          &:after
+            content: ""
+            width: rem(20)
+            height: rem(20)
+            background: url(../images/ic-arrow-right-long-light.svg)
+            background-repeat: no-repeat
+            background-size: contain
+            background-position: center
+            position: absolute
+            top: rem(12)
+            right: rem(20)
+          &:not(:last-child)
+            margin-bottom: rem(12)
+          &:hover
+            border-color: $primary
+            background: $white
+            box-shadow: 0px 8px 32px 0px rgba(0, 0, 0, 0.10)
+      .or
+        display: block
+        text-align: center
+        margin: rem(24) 0
+      .quotation-form
+        padding: rem(24)
+        background: $white
+        border: 1px solid $primary
+
+
+// About
+.about
+  &-masthead
+    position: relative
+    height: 80vh
+    &:before
+      content: ""
+      width: 100%
+      height: 100%
+      position: absolute
+      top: 0
+      left: 0
+      background: linear-gradient(0deg, rgba(2, 32, 45, 0.30) 0%, rgba(2, 32, 45, 0.30) 100%)
+      z-index: 3
+    &-bg
+      height: 100%
+      +imgBg(53% 0 0)
+  &-aboutus
+    .desc
+      padding-top: rem(40)
+  &-visimisi
+    background: rgb(9,104,144)
+    background: linear-gradient(90deg, rgba(9,104,144,1) 49%, rgba(7,82,114,1) 49%)
+    .box-visi,
+    .box-misi
+      padding: rem(80) 0
+      color: $white
+      h2
+        margin-bottom: rem(24)
+        +font-500
+    .box-visi
+      padding-right: rem(80)
+    .box-misi
+      padding-left: rem(60)
+  &-pilarnilai
+    .card-nilai
+      padding-top: rem(24)
+      border-top: 1px solid rgba(31, 31, 31, 0.25)
+      b
+        color: $dark
+        padding-right: 4px
+        .svg
+          margin-right: rem(8)
+
+// Kontak
+.kontak
+  padding-top: rem(88)
+  .kontak-form
+    h4
+      color: $dark
+      +font-600
+    .form-action
+      display: flex
+      justify-content: flex-end
+  &-box
+    .kontak-item
+      padding-bottom: rem(24)
+      border-bottom: 1px solid $light
+      &:not(:last-child)
+        margin-bottom: rem(24)
+        // border-bottom: 1px solid $light
+      b
+        display: block
+        +font-600
+        color: $dark
+        margin-bottom: rem(8)
+      .w-icon
+        display: flex
+        align-items: center
+        gap: 8px
+        .svg
+          flex: 0 0 rem(24)
+          width: rem(24)
+          height: rem(24)
+        a
+          color: $slate
+          &:hover
+            color: $primary
+      .socmeds
+        display: flex
+        gap: rem(16)
+        a
+          transition: all .3s ease-in-out
+          &:hover
+            transform: translateY(-4px)
+
+  &-map
+    position: relative
+    width: 100%
+    padding: 15.625% 0
+    iframe
+      position: absolute
+      top: 0
+      left: 0
+      width: 100%
+      height: 100%
+
+// Galeri
+//   display: block
+.galeri
+  margin-top: rem(88)
+
+.modal-galeri
+  .modal-content
+    background: transparent
+    border: 0
+    position: relative
+    .close
+      position: fixed
+      top: rem(80)
+      right: rem(80)
+      width: rem(48)
+      height: rem(48)
+      background: rgba(255, 255, 255, 0.15)
+      display: flex
+      align-items: center
+      justify-content: center
+      border-radius: 100px
+
+    .box-img
+      width: 100%
+      +imgBg(68.2% 0 0)
+    .description
+      color: $white
+      padding-left: rem(40)
+      h2
+        margin-bottom: rem(24)
+
+.grid-masonry
+  &:after
+    content: ''
+    display: block
+    clear: both
+  .grid-sizer,
+  .grid-item
+    width: rem(338)
+  .grid-item
+    float: left
+    margin-bottom: rem(24)
+    position: relative
+    img
+      display: block
+      width: 100%
+      height: 100%
+      object-fit: cover
+    &.dw
+      width: rem(700)
+    &:after
+      content: ""
+      width: 100%
+      height: 100%
+      background: linear-gradient(0deg, rgba(2, 32, 45, 0.30) 0%, rgba(2, 32, 45, 0.30) 100%)
+      position: absolute
+      top: 0
+      left: 0
+      opacity: 0
+      visibility: hidden
+      transition: all .2s ease-in-out
+    .content
+      width: 100%
+      padding: rem(24)
+      color: $white
+      position: absolute
+      left: 0
+      bottom: 0
+      z-index: 3
+      transition: all .3s ease-in-out
+      transform: translateY(10px)
+      opacity: 0
+      visibility: hidden
+      h3
+        font-size: rem(24)
+        margin-bottom: rem(8)
+    &:hover
+      cursor: pointer
+      &:after
+        opacity: 1
+        visibility: visible
+      .content
+        opacity: 1
+        visibility: visible
+        transform: translateX(0)
+// Auth
+.auth
+  &-page
+    display: flex
+    flex-wrap: wrap
+    height: 100vh
+    &-form
+      height: 100%
+      flex: 0 0 calc(100% - 59.72%)
+      max-width: calc(100% - 59.72%)
+      display: flex
+      flex-direction: column
+      padding: rem(40) rem(88)
+      padding-left: rem(58)
+      padding-top: 0
+      align-items: flex-start
+      justify-content: space-between
+      position: relative
+      .back
+        margin-top: rem(40)
+        width: 100%
+        text-align: left
+        padding-left: rem(58)
+        .btn-arrow
+          &:hover
+            &:before
+              transform: translateX(-8px) rotate(-180deg)
+      .logo
+        display: inline-flex
+        margin-bottom: rem(24)
+        img
+          width: auto
+          height: rem(48)
+      .h2
+        color: $dark
+        margin-bottom: rem(24)
+      .auth-form
+        max-width: rem(411)
+        padding-left: rem(58)
+      //   .box
+      //     max-width: rem(411)
+      .footer-desktop
+        color: $slate
+        font-size: 14px
+        text-align: left
+        width: 100%
+        padding-left: rem(58)
+        opacity: .5
+
+    &-bg
+      height: 100%
+      flex: 0 0 59.72%
+      max-width: 59.72%
+      position: relative
+      .auth-slider
+        height: 100%
+        width: 100%
+        .swiper-slide
+          display: flex
+          align-items: flex-end
+          height: 100vh
+          padding: 0 0 rem(40) rem(80)
+          position: relative
+          background-size: cover
+          background-position: center bottom
+          &:before
+            content: ""
+            width: 100%
+            height: 100%
+            position: absolute
+            top: 0
+            left: 0
+            background: linear-gradient(0deg, rgba(2, 32, 45, 0.30) 0%, rgba(2, 32, 45, 0.30) 100%)
+          .content
+            color: $white
+            max-width: rem(508)
+            position: relative
+            z-index: 3
+    .swiper
+      width: 100%
+    .swiper-pagination
+      position: absolute
+      padding-right: rem(80)
+      right: 0
+      bottom: rem(40)
+
+// Customerpage
+.customerpage
+  &-masthead
+    position: relative
+    &:before
+      content: ""
+      width: 100%
+      height: 100%
+      position: absolute
+      top: 0
+      left: 0
+      background: linear-gradient(0deg, rgba(2, 32, 45, 0.30) 0%, rgba(2, 32, 45, 0.30) 100%)
+      z-index: 3
+    &-bg
+      height: 100%
+      +imgBg(33.4% 0 0)
+    &-content
+      position: absolute
+      top: 0
+      left: 0
+      width: 100%
+      height: 100%
+      z-index: 4
+      display: flex
+      align-items: center
+      .greeting
+        font-size: rem(20)
+        line-height: 150%
+        color: $white
+        text-align: center
+        margin-bottom: rem(8)
+        span
+          opacity: .5
+      h1
+        color: $white
+        margin-bottom: 0
+        +font-500
+        max-width: rem(846)
+        margin: 0 auto
+        text-align: center
+  &-proyek
+    .section-title
+      margin-bottom: rem(24)
+      text-align: center
+      h1
+        margin-bottom: 0
+    .proyek
+      &-status
+        display: flex
+        align-items: center
+        justify-content: center
+        gap: rem(8)
+        margin-bottom: rem(48)
+        .status-tab
+          padding: rem(8) rem(24)
+          border: 1px solid #CFD1D1
+          background: $white
+          display: inline-flex
+          border-radius: 50px
+          .icon
+            width: rem(20)
+            height: rem(20)
+            margin-right: rem(8)
+          &:hover,
+          &.active
+            text-decoration: none
+            background: $primary
+            border-color: $primary
+            color: $white
+            .svg
+              path
+                fill: $white
+      &-list-wrap
+        padding: rem(48)
+        background: #F7FCFC
+      &-filter
+        display: flex
+        align-items: center
+        font-size: rem(14)
+        line-height: 150%
+        margin-bottom: rem(24)
+        .left,
+        .right
+          width: 50%
+          flex: 0 0 50%
+        .right
+          .year
+            display: flex
+            align-items: center
+            justify-content: flex-end
+            align-items: center
+            gap: 8px
+          .select
+            flex: 0 0 rem(120)
+            max-width: rem(120)
+            button.btn
+              padding: rem(6) rem(16)
+              border: 1px solid $light
+              border-radius: 50px
+              background: $white
+              color: $dark
+          .bootstrap-select
+            .dropdown-menu.show
+              min-width: auto
+              width: 100%
+              max-width: rem(240)
+      &-item
+        background: #FFFFFF
+        border: 1px solid $light //$muted
+        margin-bottom: rem(24)
+        transition: all .3s ease-in-out
+        .top
+          padding: rem(24)
+        .meta
+          display: flex
+          align-items: center
+          width: 100%
+          justify-content: space-between
+          margin-bottom: rem(16)
+          &-left
+            flex: 0 0 60%
+            max-width: 60%
+            display: flex
+            align-items: center
+            .date
+              color: $slate
+              padding-left: rem(20)
+              position: relative
+              &:before
+                content: ""
+                width: 4px
+                height: 4px
+                background: $light
+                position: absolute
+                top: 9px
+                left: 8px
+                border-radius: 50px
+          &-right
+            flex: 0 0 40%
+            max-width: 40%
+            display: flex
+            align-items: center
+            gap: 8px
+            justify-content: flex-end
+          .status
+            .tag
+              margin-bottom: 0
+          .history
+            position: relative
+            &:hover
+              img
+                transform: rotate(-180deg)
+              .history-dd
+                opacity: 1
+                visibility: visible
+          .history-dd
+            position: absolute
+            top: rem(30)
+            right: 0
+            min-width: rem(270)
+            padding: rem(24)
+            background: $white
+            border: 1px solid $smoke
+            box-shadow: 0px 10px 24px 0px rgba(25, 32, 34, 0.15)
+            max-width: rem(289)
+            visibility: hidden
+            opacity: 0
+            transition: all .3s ease-in-out
+            z-index: 3
+            h5
+              font-size: rem(20)
+              line-height: 150%
+              margin-bottom: rem(24)
+              color: $dark
+            .history-list
+              li
+                display: flex
+                align-items: center
+                &:not(:last-child)
+                  margin-bottom: rem(24)
+                .date
+                  width: rem(92)
+                  font-size: 12px
+                  position: relative
+                  &:before
+                    content: ""
+                    width: 16px
+                    height: 16px
+                    background: #F1F3F3
+                    border-radius: 50px
+                    position: absolute
+                    top: 0
+                    right: 3px
+                    z-index: 2
+                  &:after
+                    content: ""
+                    width: 8px
+                    height: 8px
+                    border-radius: 50px
+                    background: $smoke
+                    border-radius: 50px
+                    position: absolute
+                    top: 4px
+                    right: 7px
+                    z-index: 2
+                .title
+                  padding-left: rem(8)
+                  position: relative
+                  span
+                    display: block
+                    color: $dark
+                  a
+                    font-size: 14px
+
+                  &:after
+                    content: ""
+                    width: 1px
+                    height: calc(100% + #{rem(16)})
+                    position: absolute
+                    top: rem(-16)
+                    left: rem(-12)
+                    border-right: 1px dashed $smoke
+                &:first-child
+                  .title
+                    &:after
+                      top: 0
+                &:last-child
+                  .title
+                    &:after
+                      top: rem(-32)
+                      height: 100%
+                &.current
+                  .date
+                    &:before
+                      background: #FDF2E8
+                    &:after
+                      background: #B86314
+                &.ondelivery
+                  .date
+                    &:before
+                      background: lighten($primary, 70%)
+                    &:after
+                      background: $primary
+                &.invoicing
+                  .date
+                    &:before
+                      background: lighten(#B86314, 70%)
+                    &:after
+                      background: #B86314
+                &.done
+                  .date
+                    &:before
+                      background: lighten(#17B814, 50%)
+                    &:after
+                      background: #17B814
+
+                &:first-child:last-child
+                  .date
+                    &:before
+                      top: 4px
+                    &:after
+                      top: 8px
+                  .title
+                    &:after
+                      display: none !important
+
+        .product
+          display: flex
+          align-items: center
+          .left
+            flex: 0 0 60%
+            max-width: 60%
+            display: flex
+            align-items: center
+            gap: rem(24)
+            h3
+              font-size: rem(24)
+              line-height: 150%
+              margin-bottom: 0
+              a
+                color: $dark
+                &:hover
+                  text-decoration: none
+                  color: $primary
+            .qty
+              color: $muted
+              b
+                color: $dark
+
+          .right
+            flex: 0 0 40%
+            max-width: 40%
+            display: flex
+            justify-content: flex-end
+            .price-total
+              color: $primary
+              text-align: right
+              small
+                font-size: 14px
+                line-height: 150%
+              b
+                display: block
+                color: $primary
+                font-size: rem(24)
+
+        .mid
+          // padding: rem(24)
+          padding-left: rem(24)
+          padding-right: rem(24)
+          background: #FAFAFA
+          border-top: 1px solid #EDF0F2
+          border-bottom: 1px solid #EDF0F2
+          max-height: 0
+          overflow: hidden
+          transition: all .3s ease-in-out
+          h4
+            color: $dark
+            +font-600
+            margin-bottom: 6px
+
+          table
+            width: 100%
+            th
+              padding: rem(12)
+              background: $primary
+              color: $white
+              +font-400
+            td
+              padding: rem(12)
+              font-size: rem(14)
+              line-height: 150%
+              border-bottom: 1px solid #D5DBE1
+              .box-prdct
+                display: flex
+                align-items: center
+                gap: rem(16)
+                .photo
+                  width: rem(48)
+                  height: rem(48)
+                  img
+                    width: 100%
+                    height: 100%
+                    object-fit: contain
+                .name
+                  color: $dark
+
+          .btn-wrap
+            margin-top: rem(24)
+            .btn + .btn
+              margin-left: rem(16)
+
+        .bottom
+          padding: rem(24)
+          background: $white
+          display: flex
+          align-items: center
+          justify-content: space-between
+          .last-update
+            color: $slate
+          .excol
+            &:hover
+              cursor: pointer
+        &.expand
+          border-color: $muted
+          .mid
+            max-height: max-content
+            padding: rem(24)

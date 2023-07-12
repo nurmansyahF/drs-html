@@ -1,0 +1,70 @@
+/* Form */
+label
+  display: block
+  margin: 0 0 4px
+  color: $dark
+  +font-600
+  .asterix
+    color: $burgundy
+
+.form-group
+  width: 100%
+  &:not(:last-child)
+    margin-bottom: rem(16)
+  &.pcs
+    position: relative
+    .form-control
+      padding-right: rem(48)
+    &:after
+      content: "pcs"
+      position: absolute
+      right: rem(16)
+      bottom: rem(8)
+      color: $dark
+  &.pswd
+    position: relative
+    .sh-pwd
+      position: absolute
+      right: rem(16)
+      bottom: rem(10)
+      width: rem(20)
+      height: rem(20)
+      background: red
+      background: url(../images/ic-show-pw.svg) no-repeat center
+      background-size: contain
+      &:hover
+        cursor: pointer
+    &.show
+      .sh-pwd
+        background: url(../images/ic-hide-pw.svg) no-repeat center
+        background-size: contain
+
+
+
+.form-control
+  padding: rem(12)
+  background: $white
+  border: 1px solid $smoke
+  color: $slate
+  line-height: 24px
+  width: 100%
+  display: block
+  &:not(textarea)
+    height: rem(40)
+  &:focus,
+  &:hover,
+  &:visited
+    outline: none
+    box-shadow: none
+  &::-webkit-input-placeholder
+    color: $muted
+    line-height: 0
+  &:-ms-input-placeholder
+    color: $muted
+    line-height: 0
+  &::placeholder
+    color: $muted
+    line-height: 0
+  &[disabled]
+    border: 1px solid #E5E5E5
+    background: #E6E8E9

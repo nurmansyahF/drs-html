@@ -1,0 +1,330 @@
+/* Boostrap */
+@media (min-width: 576px)
+  .container
+    max-width: 540px
+
+@media (min-width: 768px)
+  .container
+    max-width: 720px
+
+@media (min-width: 992px)
+  .container
+    max-width: 960px
+
+@media (min-width: 1200px)
+  .container
+    max-width: 1248px
+
+.container
+  width: 100%
+  padding-left: 12px
+  padding-right: 12px
+  margin-right: auto
+  margin-left: auto
+  &-plt
+    padding-left: 92px
+    padding-right: 92px
+
+  +tablet
+    &-plt
+      padding-left: 5%
+      padding-right: 5%
+  +mobile
+    &-plt
+      padding-left: 24px
+      padding-right: 24px
+
+.row
+  margin-left: -12px
+  margin-right: -12px
+  &> .col,
+  &> [class*="col-"]
+    padding-left: 12px
+    padding-right: 12px
+  &.no-gutter
+    margin-left: 0
+    margin-right: 0
+    &> .col,
+    &> [class*="col-"]
+      padding-left: 0
+      padding-right: 0
+  &.double-gutter
+    margin-left: -32px
+    margin-right: -32px
+    &> .col,
+    &> [class*="col-"]
+      padding-left: 32px
+      padding-right: 32px
+
+
+.disabled
+  opacity: .5
+  pointer-events: none
+
+/* Typography */
+h1, h2, h3, h4, h5, h6
+  +font-500
+  margin-top: 0
+  letter-spacing: -0.0675rem
+  margin-bottom: 1rem
+
+h1
+  font-size: rem(48)
+  line-height: 120%
+  &.large
+    font-size: rem(64)
+    line-height: 1.2em
+
+h2,
+.h2
+  font-size: rem(36) // rem(48) // 2.5rem
+  line-height: 120%
+
+
+h3
+  font-size: rem(32) // 2rem
+  line-height: 1.333em
+  +responsive(1399px, 0)
+    font-size: 1.7rem
+  +mtablet
+    font-size: 1.5rem !important
+    line-height: 1.333em
+
+h4
+  font-size: rem(20)
+  line-height: 1.2em
+  +font-600
+
+.small
+  font-size: 0.875rem
+  line-height: 1.429em
+
+a
+  color: $blue
+  transition: color .3s ease-in-out
+  &:hover
+    text-decoration: underline
+    color: $dark
+
+b
+  +font-600
+  color: $dark
+
+p
+  margin: 0 0 1.5rem
+  &:last-child
+    margin-bottom: 0
+
+ul, ol
+  margin: 0
+  padding: 0
+  list-style: none
+
+
+article
+  h1, h2, h3, h4, h5, h6
+    +font-600()
+    color: $dark
+  p
+    word-break: break-word
+    /* Non standard for webkit */
+    -webkit-hyphens: none
+    -moz-hyphens: none
+    -ms-hyphens: none
+    hyphens: none
+    &:last-child
+      margin-bottom: 0
+
+  a
+    &:hover
+      text-decoration: underline
+
+  blockquote
+    // font-style: italic
+    q,
+    p
+      font-size: rem(28)
+      line-height: rem(40)
+      color: $secondary
+      +font-600
+      position: relative
+      &:after
+        display: none
+      &:before
+        content: ""
+        display: block
+        width: rem(32)
+        height: rem(32)
+        background: url(../images/icon-blockquote.svg) no-repeat center
+        background-size: contain
+        position: absolute
+        left: 0
+        top: rem(-60)
+    cite
+      position: absolute
+      color: #1B1536
+      padding-left: rem(32)
+      font-size: rem(16)
+      line-height: 1.5em
+      font-style: normal
+      text-align: right
+      right: 0
+      bottom: rem(-24)
+      &:before
+        content: ""
+        width: rem(24)
+        height: 1px
+        background: $primary
+        position: absolute
+        left: 0
+        bottom: rem(5)
+    .quote-writer
+      text-align: right
+      position: relative
+      span
+        position: relative
+        color: #1B1536
+        padding-left: rem(32)
+        &:before
+          content: ""
+          width: rem(24)
+          height: 1px
+          background: $primary
+          position: absolute
+          left: 0
+          bottom: rem(8)
+
+  li
+    ul, ol
+      margin: 0 1.5rem
+      padding-top: 10px
+
+  ul, ol
+    margin: 0 0 2rem
+    padding-left: 1.5rem
+    list-style: none
+    counter-reset: item
+    &:last-child
+      margin: 0
+    li
+      margin-bottom: .75rem
+      list-style: none
+      position: relative
+      &::before
+        content: counter(item) "."
+        counter-increment: item
+        color: $slate
+        +font-400()
+        position: absolute
+        top: 0
+        left: rem(-20)
+      &:last-child
+        margin: 0
+
+    &[style="list-style-type: lower-alpha;"]
+      li
+        &::before
+          content: counter(item, lower-alpha) "."
+  ul
+    list-style-type: disc
+  ol
+    list-style-type: decimal
+    ol
+      list-style: lower-alpha
+      ol
+        list-style: lower-roman
+        ol
+          list-style: lower-alpha
+  figure
+    img
+      display: block
+      width: 100%
+      height: auto
+h1,h2,h3,h4,h5
+  &:last-child
+    margin: 0
+
+
+/* Base */
+*, *:after, *:before
+  -webkit-box-sizing: border-box
+  -moz-box-sizing: border-box
+  box-sizing: border-box
+
+img
+  max-width: 100%
+
+hr
+  border: 0
+  border-top: 1px solid $blue
+
+article, aside, figcaption, figure, footer, header, hgroup, main, nav, section
+  display: block
+
++responsive(0,1200px)
+  *
+    -webkit-font-smoothing: antialiased
+    -moz-osx-font-smoothing: grayscale
+    text-decoration: none
+    font-feature-settings: "kern" 1
+    font-kerning: normal
+    &::-webkit-scrollbar
+      width: 8px
+      height: 8px
+      background-color: #F9F9F9
+
+    &::-webkit-scrollbar-track
+      -webkit-box-shadow: inset 0 0 3px rgba(0,0,0,0.2)
+      background-color: #F5F5F5
+    &::-webkit-scrollbar-thumb
+      background-color: $primary
+      border-radius: 10px
+      border: 1px solid $primary
+
+
+html, body
+  font-size: 16px
+  line-height: 150%
+  letter-spacing: -0.02rem
+  font-family: "Inter", -apple-system, BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol"
+  font-weight: 400
+  padding: 0
+  margin: 0
+  background-color: #FFFFFF
+  color: $slate
+  text-rendering: optimizeLegibility
+  -webkit-font-smoothing: antialiased
+
+  +mtablet
+    font-size: 14px
+    line-height: 1.5em
+
+
+.web-wrapper
+  width: 100%
+  overflow: hidden
+
+$g : 8 16 24 48
+$g-xs: 0 0 0 16
+@for $i from 1 through length($g)
+  .g-#{nth($g, $i)}
+    gap: #{rem(nth($g,$i))}
+  .rg-#{nth($g, $i)}
+    row-gap: #{rem(nth($g,$i))}
++mobile
+  @for $i from 1 through length($g)
+    if(nth($g-xs,$i) > 0)
+      .rg-#{nth($g, $i)}
+        row-gap: #{rem(nth($g-xs,$i))}
+
+.flex
+  display: flex
+  &-between
+    justify-content: space-between
+  &-ai
+    &-bottom
+      align-items: end
+
+
+[class*="flex-"]
+  @extend  .flex

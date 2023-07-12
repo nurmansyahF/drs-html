@@ -1,0 +1,67 @@
+extends templates/layout.pug
+
+block vars
+  - var activepage = "tentang-kami";
+  - var headerType = "alt";
+
+  include templates/dbcontent.pug
+
+
+block content
+  .about
+    section.about-masthead
+      .about-masthead-bg
+        img.bg(src="images/about-masthead-img.jpg", alt="img")
+    section.section.xl.about-aboutus
+      .container
+        .row
+          .col-lg-6
+            .section-title
+              .tag Tentang Kami
+              h1 Menyelesaikan kesulitan proses pengadaan dengan solusi kami.a
+          .col-lg-6
+            .desc
+              p CV. Dima Rama Sakti adalah perusahaan yang bergerak di bidang pengadaan barang-barang part mekanis, IT, kelistrikan, rumah tangga, dan alat tulis kantor. Sejak didirikan, kami telah mengabdikan diri kami untuk menyediakan solusi terbaik bagi pelanggan kami dalam memenuhi kebutuhan mereka.
+
+              p Kami berkomitmen untuk menyediakan solusi pengadaan barang-barang kebutuhan penunjang bisnis Anda. Dengan fokus pada keunggulan, kepuasan pelanggan, dan integritas, kami mengutamakan pelayanan yang profesional, harga yang kompetitif, kualitas terbaik dan pengiriman tepat waktu.
+
+    section.about-visimisi
+      .container
+        .row.no-gutter
+          .col-lg-6
+            .box-visi
+              h2 Visi Kami
+              p Menjadi mitra terpercaya dan terkemuka dalam menyediakan solusi produk dan layanan terbaik di bidang engineering, IT, dan alat tulis kantor. Kami bertujuan untuk terus mengembangkan bisnis kami dengan mengutamakan inovasi, kehandalan, dan kepuasan pelanggan.
+          .col-lg-6
+            .box-misi
+              h2 Misi Kami
+              p Menyediakan solusi terbaik dalam pengadaan barang berkualitas tinggi kepada pelanggan kami. Kami bertekad untuk menjadi mitra yang dapat diandalkan dan terpercaya dalam memenuhi kebutuhan pengadaan barang pelanggan kami.
+
+    section.section.xl.about-pilarnilai
+      .container
+        .section-title
+          .row
+            .col-lg-6
+              h2 Pilar Nilai Perusahaan
+              .subdesc
+                p Kami menjunjung tinggi etika bisnis yang kuat dan memastikan bahwa setiap tindakan kami selaras dengan prinsip-prinsip yang kami pegang.
+        .pilarnilai-wrap
+          .row
+            .col-md-4
+              .card-nilai
+                b
+                  img.svg(src="images/ic-pilarnilai-1.svg", alt="icon")
+                  span Kualitas.
+                span Kami mengutamakan kualitas dalam setiap aspek bisnis kami, dari produk hingga layanan, dengan menyediakan produk berkualitas tinggi dan memberikan layanan terbaik kepada pelanggan.
+            .col-md-4
+              .card-nilai
+                b
+                  img.svg(src="images/ic-pilarnilai-2.svg", alt="icon")
+                  span Integritas.
+                span Kami berpegang teguh pada prinsip integritas dalam segala hal yang kami lakukan. Kami menjaga komitmen kami terhadap kejujuran, etika, dan profesionalisme.
+            .col-md-4
+              .card-nilai
+                b
+                  img.svg(src="images/ic-pilarnilai-3.svg", alt="icon")
+                  span Kolaborasi.
+                span Kami percaya dalam kerja sama tim dan kolaborasi yang kuat. Kami bekerja bersama pelanggan, mitra, dan tim internal kami untuk mencapai tujuan bersama dan memberikan solusi yang optimal.

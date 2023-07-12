@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+html(lang="en")
+  head
+    block head
+      meta(charset="UTF-8")
+      meta(http-equiv="X-UA-Compatible" content="IE=edge,chrome=1")
+      meta(name="viewport" content="width=device-width, initial-scale=1")
+      title Dima Rama Sakti
+      meta(name="description" content="")
+      meta(name="theme-color" content="")
+      link(rel="shortcut icon" href="favicon.png")
+      link(rel="stylesheet" href="styles/plugins.css")
+      link(rel="stylesheet" href="styles/main.css")
+    block addStyle
+
+  include  dbcontent.pug
+  block vars
+    - var activepage = "";
+    - var headerType = "";
+
+  body
+    #wrap
+      .web-wrapper#page
+        block header
+          include header.pug
+        block mixin
+          include mixin.pug
+        main
+          block content
+
+        block footer
+          //- a.ic-wa(href="https://wa.me/6281392770506?&text=Halo%20saya%20ingin%20menanyakan%20tentang%20produk%20Mekari%20(M01)" target="_blank")
+          //-   img(src="images/ic-wa.svg" width="48" height="48" alt="Wa Me")
+          //-   span Hubungi Sales
+          include footer.pug
+
+        .back-to-top
+
+    block modal
+
+  //- only for prototype
+  script.
+    var page_id = 1;
+
+  block script
+    script(src="plugins/jquery/jquery-3.4.1.min.js")
+    script(src="plugins/bootstrap/popper.min.js")
+    script(src="plugins/bootstrap/bootstrap.min.js")
+    script(src="plugins/bootstrap-select/bootstrap-select.min.js")
+    script(src="plugins/lity/lity.js")
+    script(src="plugins/swiper/swiper-bundle.min.js")
+    script(src="plugins/masonry/masonry.pkgd.min.js")
+    script(defer src="scripts/main.js")
+  block addscript
+

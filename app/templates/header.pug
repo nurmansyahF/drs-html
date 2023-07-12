@@ -1,0 +1,63 @@
+header.header(id="header" class=headerType =="alt"? "header-alt":"")
+  .container
+    .header-main
+      .header-logo
+        a(href="home.html")
+          img(src="images/main-logo-drs.png", alt="logo-drs")
+      .header-menu
+        nav.main-menu
+          .menu-item.has-sub(class=activepage =="produk"? "active":"")
+            a(href="produk.html") Produk
+            .submenu.md
+              .submenu-title
+                b Kategori Produk
+              ul.submenu-list
+                li
+                  a(href="#") Part Mekanis
+                li
+                  a(href="#") Kelistrikan
+                li
+                  a(href="#") Komponen IT
+                li
+                  a(href="#") Peralatan Rumah Tangga
+                li
+                  a(href="#") Oli & Pelumas
+                li
+                  a(href="#") Sekrup, Baut, Mur
+                li
+                  a(href="#") Perkakas
+                li
+                  a(href="#") Alat Tulis Kantor
+
+          .menu-item(class=activepage =="tentang-kami"? "active":"")
+            a(href="tentang-kami.html") Tentang Kami
+          .menu-item(class=activepage =="galeri"? "active":"")
+            a(href="galeri.html") Galeri
+          .menu-item(class=activepage =="kishatara"? "active":"")
+            a(href="kishatara.html") KISHATARA
+          .menu-item(class=activepage =="kontak-kami"? "active":"")
+            a(href="kontak-kami.html") Kontak Kami
+      .header-right
+        .header-search
+          form.searchform(action="#")
+            input.form-control(type="text" placeholder="Cari disini...")
+          .sc-trigger
+            img.icon-search.svg(src=headerType =="alt"? "images/icon-search-white.svg":"images/icon-search.svg", alt="icon")
+        a.header-btnauth(href="login.html")
+          img.svg(src=headerType =="alt"? "images/ic-user-white.svg":"images/ic-user-blue.svg"  , alt="icon")
+          span Login Customer
+        .header-logedinuser
+          .ppuser
+            img(src="images/pp-user.svg", alt="ppuser")
+
+      .mobile-menu
+        span
+        span
+        span
+
+
+
+
+
+
+
