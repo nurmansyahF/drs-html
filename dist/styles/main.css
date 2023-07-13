@@ -414,7 +414,9 @@ html, body { font-size: 16px; line-height: 150%; letter-spacing: -0.02rem; font-
 
 .bootstrap-select .btn:after { content: ""; width: 1rem; height: 1rem; border: 0; background: url(../images/ic-carret-down-dark.svg); background-repeat: no-repeat; background-size: contain; background-position: center; }
 
-.bootstrap-select .dropdown-menu:not(.inner).show { z-index: 10; background: #FFFFFF; border: 1px solid #99A2A5; padding: 0.375rem 0.75rem; }
+.bootstrap-select .dropdown-menu:not(.inner).show { z-index: 10; background: #FFFFFF; border: 1px solid #99A2A5; }
+
+.bootstrap-select .dropdown-menu.inner { font-size: 0.875rem; line-height: 150%; }
 
 .bootstrap-select .dropdown-menu.inner li:not(:last-child) { margin-bottom: 0.5rem; }
 
@@ -557,7 +559,7 @@ html, body { font-size: 16px; line-height: 150%; letter-spacing: -0.02rem; font-
 
 .dropup .dropdown-menu { top: auto; bottom: 100%; margin-top: 0; margin-bottom: 0.125rem; }
 
-.dropup .dropdown-toggle::after { display: inline-block; margin-left: 0.255em; vertical-align: 0.255em; content: ""; border-top: 0; border-right: 0.3em solid transparent; border-bottom: 0.3em solid; border-left: 0.3em solid transparent; }
+.dropup .dropdown-toggle::after { -webkit-transform: rotate(-180deg); transform: rotate(-180deg); }
 
 .dropup .dropdown-toggle:empty::after { margin-left: 0; }
 
@@ -913,6 +915,10 @@ button.btn:hover, button.btn:focus, button.btn:visited { outline: none !importan
 .header .submenu-list li:hover a:after { left: calc(100% + 0.625rem); opacity: 1; visibility: visible; }
 
 .header.usersignin .header-right .header-logedinuser { display: block; }
+
+.header.usersignin .header-right .header-logedinuser .dropdown .dropdown-toggle::after { width: 1rem; height: 1rem; background: url(../images/ic-carret-down-blue.svg) no-repeat center; border: 0; vertical-align: middle; transition: all .3s ease-in-out; }
+
+.header.usersignin .header-right .header-logedinuser .dropdown.show .dropdown-toggle::after { -webkit-transform: rotate(-180deg); transform: rotate(-180deg); }
 
 .header.usersignin .header-right .header-btnauth { display: none; }
 
