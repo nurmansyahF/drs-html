@@ -40,7 +40,8 @@
         margin-bottom: rem(4)
       h1
         margin-bottom: rem(40)
-
+        width: 100%
+        max-width: rem(845)
 
   &-category
     .section-title
@@ -48,7 +49,7 @@
       border-top: 1px solid $burgundy
       .row
         align-items: flex-end
-        .col-md-6:last-child
+        .col-lg-6:last-child
           display: flex
           justify-content: flex-end
     &-wrap
@@ -116,7 +117,12 @@
   &-aboutus
     position: relative
     &-bg
-      +imgBg(32.201% 0 0)
+      +imgBg(100% 0 0)
+      position: absolute
+      top: 0
+      left: 0
+      width: 100%
+      height: 100%
       &:after
         content: ""
         width: 100%
@@ -126,18 +132,20 @@
         left: 0
         background: linear-gradient(82deg, rgba(0, 0, 0, 0.50) 0%, rgba(0, 0, 0, 0.00) 51.93%)
     &-content
-      position: absolute
-      top: 0
-      left: 0
-      width: 100%
-      height: 100%
+      // position: absolute
+      // top: 0
+      // left: 0
+      // width: 100%
+      // height: 100%
       z-index: 3
+      position: relative
       padding: rem(64) 0
+      min-height: rem(640)
+      display: flex
       .container
-        height: 100%
+        flex: 1
         display: flex
         flex-direction: column
-        justify-content: space-between
       .section-title
         h2
           color: $white
@@ -149,6 +157,7 @@
         max-width: max-content
         color: $white
         border-bottom: 1px solid $white
+        margin-top: auto
         &:after
           background: url(../images/ic-arrow-right-long.svg)
           background-repeat: no-repeat
@@ -159,9 +168,12 @@
 
   &-solution
     background: #9CC9CE
+    .solution-wrap
+      margin-bottom: rem(-40)
     .card-solution
       border-top: 1px solid rgba(31, 31, 31, 0.25)
       padding-top: rem(24)
+      margin-bottom: rem(40)
       b
         color: $dark
         padding-right: 4px
@@ -170,6 +182,7 @@
           height: rem(24)
           display: inline-flex
           margin-right: rem(8)
+
   &-client
     .client
       &-wrap
@@ -223,6 +236,102 @@
       text-align: center
       margin-top: rem(48)
 
+  +maxtablet()
+    &-masthead
+      &-swiper
+        .swiper
+          &-slide
+            &:before
+              padding: 115% 0 0
+    &-category
+      .section-title
+        .row
+          .col-lg-6
+            &:first-child
+              margin-bottom: 24px
+            &:last-child
+              justify-content: flex-start
+
+      &-wrap
+        .card-category-img:before
+          padding: 71.425% 0 0
+    &-aboutus
+      padding: rem(48) 0
+      &-content
+        min-height: rem(436.03)
+        padding: 0
+      &-bg
+        &:after
+          background: #000
+          opacity: .5
+    &-someproduct
+      .product-card
+        max-width: 100%
+    &-client
+      .client
+        &-wrap
+          .col-lg-3
+            &:nth-child(4n)
+              border-right: 1px solid rgba(27, 21, 54, 0.1)
+            &:nth-child(2n)
+              border-right: 0
+            &:nth-child(-n+4)
+              border-top: 1px solid rgba(27, 21, 54, 0.1)
+            &:nth-child(-n+2)
+              border-top: 0
+
+  +mobile
+    &-masthead
+      max-height: 600px
+      &-content
+        padding-bottom: 24px
+        .container
+        .swiper-pagination
+          margin-top: 56px
+      &-swiper
+        .swiper-slide:before
+          padding: 191% 0 0
+    &-client
+      .client
+        &-wrap
+          .col-lg-3
+            flex: 0 0 50%
+            max-width: 50%
+          .client-logo
+            padding: 16px
+    &-category
+      .section-title
+        padding-top: 32px
+      &-wrap
+        .col-md-6
+          flex: 0 0 50%
+          max-width: 50%
+          padding-left: 6px
+          padding-right: 6px
+          margin-bottom: 12px
+        .card-category
+          &-img:before
+            padding: 128.2% 0 0
+          &-name
+            padding: 12px
+            display: block
+            h4
+              margin-bottom: 8px
+    &-aboutus
+      padding: 48px 0
+    &-someproduct
+      .section-title
+        .col-md-8
+          margin-bottom: 24px
+      .prevnext
+        justify-content: flex-start
+      .row
+        margin-left: -8px
+        margin-right: -8px
+        .col-lg-3
+          padding-left: 8px
+          padding-right: 8px
+          margin-bottom: 16px !important
 
 // Produk
 .produk
@@ -267,6 +376,7 @@
       display: flex
       align-items: center
       gap: 8px
+      position: relative
       .kategori-item
         padding: rem(6) rem(12)
         +font-500
@@ -277,6 +387,8 @@
         color: $white
         position: relative
         transition: all .3s ease-in-out
+        width: auto
+        max-width: max-content
         &.active
           padding-left: rem(26)
           background: $white
@@ -298,7 +410,35 @@
           color: $primary
     &-bg
       +imgBg(53% 0 0)
+
+    .box-swiper
+      width: 100%
+      overflow: hidden
+    .swiper-button-prev,
+    .swiper-button-next
+      width: rem(28)
+      height: rem(28)
+      background: $white
+      border-radius: 50px
+      border: 1px solid $primary
+      display: flex
+      align-items: center
+      justify-content: center
+      text-align: center
+      top: rem(26)
+      &::after
+        width: rem(12)
+        height: rem(12)
+        font-size: 12px
+        line-height: 12px
+      &.swiper-button-disabled
+        display: none
+    .swiper-button-prev
+      left: rem(-4)
+    .swiper-button-next
+      right: rem(-4)
   &-list
+    background: #F7FCFC
     &-filter
       margin-bottom: rem(40)
       b
@@ -315,7 +455,8 @@
         .select
           flex: 0 0 rem(240)
           max-width: rem(240)
-          button.btn
+          button.btn,
+          button
             padding: rem(6) rem(16)
             border: 1px solid $light
             border-radius: 50px
@@ -326,10 +467,52 @@
             min-width: auto
             width: 100%
             max-width: rem(240)
+        &.filter-mobile
+          display: none
   &-wrap
     margin-bottom: rem(-24)
     .col-lg-3
       margin-bottom: rem(24)
+
+  +maxtablet
+    &-masthead
+      height: rem(400)
+  +mobile
+    &-kategori-wrap
+      opacity: 0
+      visibility: hidden
+    &-list
+      &-filter
+        .col-lg-3
+          display: none
+        .filter
+          display: block
+          & > span
+            display: block
+            margin-bottom: 8px
+          .select
+            max-width: 100%
+            button
+              padding: 12px !important
+            .dropdown-menu.show
+              max-width: 100%
+          &.filter-mobile
+            display: block
+            margin-bottom: 12px
+    &-wrap
+      & > .row
+        margin-left: -8px
+        margin-right: -8px
+      .col-md-6
+        flex: 0 0 50%
+        max-width: 50%
+        padding-left: 8px
+        padding-right: 8px
+        margin-bottom: 16px
+      .product-card
+        height: 100%
+        background: #FFF
+
 
 .produk-detail
   &-top
@@ -337,36 +520,61 @@
   &-photo
     position: relative
     .photo-thumbnail
+      overflow: hidden
       position: absolute
-      top: calc(50% - #{rem(130)})
       left: rem(24)
-      width: rem(50)
-      // height: rem(300)
+      top: calc(50% - #{rem(138)})
       display: flex
-      flex-direction: column
       align-items: center
-      gap: rem(12)
+      justify-content: space-between
+      flex-direction: column
       z-index: 3
+      &.no-slider
+        .box-swiper
+          .swiper-wrapper
+            justify-content: center
+      .box-swiper
+        position: relative
+        height: 228px
+        overflow: hidden
       .swiper-wrapper
-        gap: rem(12)
-        flex-direction: column
       .swiper-slide
         width: rem(48)
         height: rem(48)
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.10)
+        border: 1px solid rgba(78, 94, 101, 0.3)
+        img
+          display: block
+          width: 100%
+          height: 100%
+          object-fit: cover
+          object-position: center
+        &.selected
+          border-color: $primary
+        &:hover
+          cursor: pointer
       .prev-sliderV,
       .next-sliderV
         width: rem(24)
         height: rem(24)
+        position: relative
+        z-index: 4
         .svg,
         img
           width: rem(24)
           height: rem(24)
+        &.swiper-button-disabled
+          opacity: .3
+        &:hover
+          cursor: pointer
       .prev-sliderV
         transform: rotate(-180deg)
     .box-img
       +imgBg(100% 0 0)
   &-info
     padding-left: rem(56)
+    .tag
+      margin-bottom: rem(24)
     h1
       color: $dark
       font-size: rem(28)
@@ -396,12 +604,46 @@
           +font-500
           &.red
             color: $burgundy
+          .regular-price
+            font-size: rem(16)
+            line-height: 150%
+            color: $slate
+            padding: 0 8px
+            letter-spacing: -0.32px
+            text-decoration: line-through
+          .discount
+            padding: 0 5px
+            font-size: rem(12)
+            line-height: rem(20)
+            color: $white
+            background: #FF5C5C
+            border-radius: 6px
+            display: inline-block
+            vertical-align: middle
+    .moq-notes
+      font-size: rem(12)
+      line-height: 150%
+      letter-spacing: -.24px
+      display: block
+      color: $muted
+      padding: rem(16) 0 rem(24)
+      border-bottom: 1px dashed $light
+    .despro-right
+      & > b
+        display: block
+        margin-bottom: rem(16)
+      article
+        margin-bottom: rem(24)
+        // // max-height: 3em
+        // overflow: hidden
+        // max-height: 3em
+        // overflow: hidden
   &-desc
     position: relative
     border-top: 1px solid $light
     &:after
       content: ""
-      width: 43.468%
+      width: 50%
       height: 100%
       background: linear-gradient(180deg, #F7FCFC 0%, rgba(247, 252, 252, 0.00) 100%)
       position: absolute
@@ -411,9 +653,13 @@
       position: relative
       z-index: 5
     .row
-      .col-lg-5
-    .desc-right
-      padding-left: rem(80)
+      .col-lg-6:last-child
+        display: flex
+        justify-content: flex-end
+    .desc-left
+      max-width: rem(560)
+      article
+        margin-bottom: rem(40)
       h3
         +font-600
         color: $dark
@@ -422,13 +668,18 @@
         margin-bottom: rem(16)
       .ecommerce
         &-list
+          max-width: rem(456)
         &-item
-          padding: rem(12) rem(24)
+          padding: rem(23.1) rem(32)
           background: $white
           border: 1px solid $light
           display: flex
           position: relative
           transition: all .3s ease-in-out
+          img
+            width: auto
+            height: rem(32)
+            object-fit: contain
           &:after
             content: ""
             width: rem(20)
@@ -438,7 +689,7 @@
             background-size: contain
             background-position: center
             position: absolute
-            top: rem(12)
+            top: calc(50% - #{rem(10)})
             right: rem(20)
           &:not(:last-child)
             margin-bottom: rem(12)
@@ -446,8 +697,24 @@
             border-color: $primary
             background: $white
             box-shadow: 0px 8px 32px 0px rgba(0, 0, 0, 0.10)
+            &:after
+              background: url(../images/ic-arrow-right-long-blue.svg)
+              background-repeat: no-repeat
+              background-size: contain
+              background-position: center
+
+    .desc-right
+      // padding-left: rem(80)
+      width: 100%
+      max-width: rem(560)
+      h3
+        +font-600
+        color: $dark
+        font-size: rem(20)
+        line-height: 120%
+        margin-bottom: rem(16)
       .or
-        display: block
+        display: none
         text-align: center
         margin: rem(24) 0
       .quotation-form
@@ -455,6 +722,58 @@
         background: $white
         border: 1px solid $primary
 
+  +mobile
+    &-top
+      padding-top: 0 !important
+    &-photo
+      margin-left: -12px
+      margin-right: -12px
+      .photo-thumbnail
+        width: calc(100%)
+        max-width: 100%
+        margin-left: -20px
+        margin-right: -20px
+        flex-direction: row
+        top: calc(50% - 12px)
+        .box-swiper
+          height: 0
+          opacity: 0
+          visibility: hidden
+        .prev-sliderV,
+        .next-sliderV
+          width: 24px
+          flex: 0 0 24px
+          height: 24px
+        .prev-sliderV
+          transform: rotate(90deg)
+        .next-sliderV
+          transform: rotate(-90deg)
+    &-info
+      padding: 48px 0
+      padding-left: 0
+
+    &-desc
+      background: linear-gradient(180deg, #F7FCFC 0%, rgba(247, 252, 252, 0.00) 100%)
+      &:after
+        display: none
+      &-left
+      .desc-left
+        .ecommerce-item
+          padding: 12px 24px
+          img
+            max-height: 24px
+      .desc-right
+        .or
+          display: block
+
+    .someproduct-wrap
+      .row
+        .col-lg-3
+          margin-bottom: 24px
+          flex: 0 0 50%
+          max-width: 50%
+          .product-card-price
+            flex-wrap: wrap
 
 // About
 .about
@@ -491,14 +810,57 @@
     .box-misi
       padding-left: rem(60)
   &-pilarnilai
+    .pilarnilai-wrap
+      margin-bottom: rem(-40)
     .card-nilai
       padding-top: rem(24)
       border-top: 1px solid rgba(31, 31, 31, 0.25)
+      margin-bottom: rem(40)
       b
         color: $dark
         padding-right: 4px
         .svg
           margin-right: rem(8)
+
+  +maxtablet
+    &-aboutus
+    &-visimisi
+      background: #FFF
+      & > .container
+        padding-left: 0
+        padding-right: 0
+      .col-lg-6:not(:last-child)
+      .box-visi,
+      .box-misi
+        padding: 64px 48px
+      .box-visi
+        background: #075272
+      .box-misi
+        background: #096890
+      // background: linear-gradient(180deg, #096890 49%, #075272 49%)
+      // .box-misi
+      //   padding-left: 0
+
+
+  +mobile
+    &-masthead
+      max-height: 400px
+    &-aboutus
+      .desc
+        padding-top: 0
+    &-visimisi
+      background: #FFF
+      & > .container
+        padding-left: 0
+        padding-right: 0
+      .col-lg-6:not(:last-child)
+      .box-visi,
+      .box-misi
+        padding: 48px 24px
+      .box-visi
+        background: #075272
+      .box-misi
+        background: #096890
 
 // Kontak
 .kontak
@@ -553,6 +915,16 @@
       width: 100%
       height: 100%
 
+  &-faq
+    .section-title
+      margin-bottom: rem(48)
+      h2
+        margin-bottom: 0
+  +mobile
+    &-map
+      padding: 200px 0 0
+
+
 // Galeri
 //   display: block
 .galeri
@@ -574,7 +946,8 @@
       align-items: center
       justify-content: center
       border-radius: 100px
-
+    .slider
+      overflow: hidden
     .box-img
       width: 100%
       +imgBg(68.2% 0 0)
@@ -591,18 +964,34 @@
     clear: both
   .grid-sizer,
   .grid-item
-    width: rem(338)
+    width: 30.178% //31.826%//rem(338)
   .grid-item
     float: left
     margin-bottom: rem(24)
     position: relative
+    &:before
+      content: ""
+      width: 100%
+      padding-top: 208.2875% //197.6% //48.3%
+      display: block
     img
       display: block
       width: 100%
       height: 100%
       object-fit: cover
+      position: absolute
+      top: 0
+      left: 0
     &.dw
-      width: rem(700)
+      width: 62.5% //65.913% //rem(700)
+      &:before
+        content: ""
+        width: 100%
+        padding-top: 51.43% //50%
+        display: block
+    &.sq
+      &:before
+        padding-top: 106.51% //94.676% //100%
     &:after
       content: ""
       width: 100%
@@ -638,6 +1027,41 @@
         opacity: 1
         visibility: visible
         transform: translateX(0)
+  +maxtablet
+    .grid-sizer,
+    .grid-item
+      width: calc((100% / 3) - 24px)
+      margin-bottom: 16px
+      &:after
+        opacity: 1
+        visibility: visible
+      .content
+        opacity: 1
+        visibility: visible
+        // color: $dark
+        padding: 16px
+        transform: translateX(0)
+        h3
+          margin-bottom: 0
+          width: 100%
+          // overflow: hidden
+          // text-overflow: ellipsis
+        p
+          display: none
+
+    .grid-item.dw
+      width: calc(((100% / 3) - 18px) * 2)
+  +mobile
+    .grid-sizer,
+    .grid-item
+      width: calc((100% / 2) - 12px)
+      height: 200px
+      .content
+        h3
+          font-size: 18px !important
+    .grid-item.dw
+      width: calc((100% / 2) - 12px)
+
 // Auth
 .auth
   &-page
@@ -723,6 +1147,31 @@
       padding-right: rem(80)
       right: 0
       bottom: rem(40)
+  +maxtablet
+    &-page
+      &-form,
+      &-bg
+        max-width: 50%
+        flex: 0 0 50%
+      &-form
+        .back,
+        .auth-form,
+        .footer-desktop
+          padding-left: 0
+      &-bg
+        .auth-slider
+          .swiper-slide
+            padding-left: rem(40)
+            padding-bottom: rem(80)
+  +mobile
+    &-page
+      &-form
+        max-width: 100%
+        flex: 0 0 100%
+        padding: 0 20px
+        padding-bottom: rem(32)
+      &-bg
+        display: none
 
 // Customerpage
 .customerpage
@@ -770,6 +1219,13 @@
       text-align: center
       h1
         margin-bottom: 0
+    .label-mobile
+      display: none
+      font-size: 12px
+      line-height: 150%
+      color: $muted
+      letter-spacing: .24px
+      margin-bottom: 8px
     .proyek
       &-status
         display: flex
@@ -1091,3 +1547,211 @@
           .mid
             max-height: max-content
             padding: rem(24)
+  +maxtablet
+    margin-top: 84px
+    &-masthead
+      &-bg
+        &:before
+          padding: 111.112% 0 0
+  +mobile
+    &-proyek
+      .section-title
+        h2
+          font-size: 28px
+          text-align: left
+      .proyek
+        &-status
+          display: none
+          & + .bootstrap-select
+            z-index: 30
+            margin-bottom: 12px
+            .btn.dropdown-toggle
+              background: #FFF
+              border-radius: 50px
+              color: $primary
+              border: 1px solid rgba(229, 229, 229, 1)
+              padding: 12px
+              +font-500
+            .dropdown-menu:not(.inner).show
+              z-index: 30
+            .dropdown-menu.show
+              min-width: auto
+              width: 100%
+              max-width: 100%
+        &-filter
+          flex-direction: column
+          margin-bottom: 24px
+          .left,
+          .right
+            width: 100%
+            flex: 0 0 100%
+            max-width: 100%
+          .left
+            order: 2
+          .right
+            order: 1
+            margin-bottom: 48px
+          .right
+            .year
+              display: block
+              span
+                display: block
+                width: 100%
+                margin-bottom: 8px
+                color: $muted
+              .bootstrap-select
+                z-index: 10
+                .btn.dropdown-toggle
+                  background: #FFF
+                  border-radius: 50px
+                  color: $primary
+                  border: 1px solid rgba(229, 229, 229, 1)
+                  padding: 12px
+                  +font-500
+                .dropdown-menu:not(.inner).show
+                  z-index: 10
+                .dropdown-menu.show
+                  min-width: auto
+                  width: 100%
+                  max-width: 100%
+            .select
+              max-width: 100%
+
+        &-list-wrap
+          background: #FFF
+          padding: 0
+        &-item
+          .meta
+            &-left
+              display: block
+              flex: 0 0 142px
+              max-width: 142px
+              .invc
+                width: 100%
+                text-overflow: ellipsis
+                display: block
+                overflow: hidden
+              .date
+                padding-left: 0
+                &:before
+                  display: none
+            &-right
+              flex: 0 0 calc(100% - 142px)
+              max-width: calc(100% - 142px)
+              .tag
+                font-size: 12px
+                line-height: 150%
+          .product
+            flex-wrap: wrap
+            gap: 8px
+            .left
+              flex: 0 0 100%
+              max-width: 100%
+              align-items: flex-start
+              margin-bottom: 24px
+              h3
+                font-size: 18px !important
+                line-height: 120%
+            .product-photo
+              width: 48px
+              height: 48px
+              img
+                width: 100%
+                height: 100%
+            .right
+              flex: 0 0 100%
+              max-width: 100%
+              justify-content: flex-start
+              .price-total b
+                display: inline
+                font-size: 18px
+                line-height: 120%
+                padding-left: 4px
+        &-item
+          &.expand
+            .mid
+              padding: 16px
+          .table
+            width: 100%
+            max-height: 224px
+            overflow: auto
+            position: relative
+            table
+              thead
+                width: 100%
+                position: sticky
+                top: 0
+              th
+                min-width: 120px
+                text-align: left
+                &:first-child
+                  min-width: 160px
+                  position: sticky
+                  left: 0
+                &:last-child
+                  min-width: 50px
+                &.text-right
+                  text-align: left !important
+              tr:first-child
+                // td
+                //   padding-top: 56px
+              td
+                min-width: 120px
+                text-align: left
+                &:first-child
+                  min-width: 160px
+                  background: #fafafa
+                  position: sticky
+                  left: 0
+                &:last-child
+                  min-width: 50px
+                .box-prdct
+                  .photo
+                    flex: 0 0 32px
+                    max-width: 32px
+                    height: 32px
+                  .name
+                    max-height: 3em
+                    overflow: hidden
+                &.text-right
+                  text-align: left !important
+
+          .top,
+          .bottom
+            padding: 16px
+          .mid
+
+            .btn-wrap
+              .btn
+                width: 100%
+                & + .btn
+                  margin-left: 0
+                  margin-top: 8px
+          .bottom
+            flex-direction: column
+            .right
+              display: flex
+              justify-content: space-between
+              align-items: center
+              width: 100%
+              margin-bottom: 24px
+            .left
+              order: 2
+            .right
+              order: 1
+            .btn-border
+              flex: 0 0 132px
+              max-width: 132px
+              font-size: 0
+              line-height: 0
+              &:before
+                content: "Follow-up"
+                font-size: 14px
+                line-height: 150%
+    .label-mobile
+      display: block
+// Search Results
+.searchresults
+  padding-top: rem(176)
+  padding-bottom: rem(88)
+  background: #F7FCFC

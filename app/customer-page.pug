@@ -61,12 +61,12 @@ block header
           .header-logedinuser
             .dropdown
               .ppuser.dropdown-toggle( id="ddUser" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false")
-                img(src="images/pp-user.svg", alt="ppuser")
+                //- img(src="images/pp-user.svg", alt="ppuser")
+                span B
               .dropdown-menu(aria-labelledby="dropdownMenuButton")
                 a.dropdown-item(href="login.html") Logout
 
         .mobile-menu
-          span
           span
           span
 
@@ -87,6 +87,7 @@ block content
       .container
         .section-title
           h2 Daftar proyek BTPNS
+        span.label-mobile Filter berdasarkan:
         .proyek-status
           a.status-tab.active(href="#")
             img.icon.svg(src="images/icon-status-1.svg", alt='icon')
@@ -157,74 +158,75 @@ block content
                     b Rp 23.680.000
             .mid
               h4 Daftar produk
-              table
-                thead
-                  tr
-                    th Produk
-                    th.text-right Qty Order
-                    th.text-right Outstanding
-                    th.text-right Delivered
-                    th Status
-                    th Tanggal
-                    th &nbsp;
-                tbody
-                  tr
-                    td
-                      .box-prdct
-                        .photo
-                          img(src="images/product-img.jpg", alt="photo")
-                        .name NTN Deep Groove Ball Bearing 6000 Series (Laher)
-                    td.text-right
-                      span 2,000
-                    td.text-right
-                      span.text-burgundy -1,000
-                    td.text-right
-                      span.text-green 1,000
-                    td
-                      span.tag.small.ondelivery On-Delivery
-                    td
-                      span ETA: 17 Jun 2023
-                    td
-                      span.info(data-toggle="tooltip" data-placement="right" data-original-title="Last update: 14 Jun 2023")
-                        img(src="images/icon-info.png", alt="icon")
-                  tr
-                    td
-                      .box-prdct
-                        .photo
-                          img(src="images/product-img.jpg", alt="photo")
-                        .name NTN Deep Groove Ball Bearing 6000 Series (Laher)
-                    td.text-right
-                      span 2,000
-                    td.text-right
-                      span.text-burgundy 0
-                    td.text-right
-                      span.text-green 1,000
-                    td
-                      span.tag.small.green Selesai
-                    td
-                      span ETA: 17 Jun 2023
-                    td
-                      span.info(data-toggle="tooltip" data-placement="right" data-original-title="Last update: 14 Jun 2023")
-                        img(src="images/icon-info.png", alt="icon")
-                  tr
-                    td
-                      .box-prdct
-                        .photo
-                          img(src="images/product-img.jpg", alt="photo")
-                        .name NTN Deep Groove Ball Bearing 6000 Series (Laher)
-                    td.text-right
-                      span 2,000
-                    td.text-right
-                      span.text-burgundy 0
-                    td.text-right
-                      span.text-green 1,000
-                    td
-                      span.tag.small.green Selesai
-                    td
-                      span ETA: 17 Jun 2023
-                    td
-                      span.info(data-toggle="tooltip" data-placement="right" data-original-title="Last update: 14 Jun 2023")
-                        img(src="images/icon-info.png", alt="icon")
+              .table
+                table
+                  thead
+                    tr
+                      th Produk
+                      th.text-right Qty Order
+                      th.text-right Outstanding
+                      th.text-right Delivered
+                      th Status
+                      th Tanggal
+                      th &nbsp;
+                  tbody
+                    tr
+                      td
+                        .box-prdct
+                          .photo
+                            img(src="images/product-img.jpg", alt="photo")
+                          .name NTN Deep Groove Ball Bearing 6000 Series (Laher)
+                      td.text-right
+                        span 2,000
+                      td.text-right
+                        span.text-burgundy -1,000
+                      td.text-right
+                        span.text-green 1,000
+                      td
+                        span.tag.small.ondelivery On-Delivery
+                      td
+                        span ETA: 17 Jun 2023
+                      td
+                        span.info(data-toggle="tooltip" data-placement="right" data-original-title="Last update: 14 Jun 2023")
+                          img(src="images/icon-info.png", alt="icon")
+                    tr
+                      td
+                        .box-prdct
+                          .photo
+                            img(src="images/product-img.jpg", alt="photo")
+                          .name NTN Deep Groove Ball Bearing 6000 Series (Laher)
+                      td.text-right
+                        span 2,000
+                      td.text-right
+                        span.text-burgundy 0
+                      td.text-right
+                        span.text-green 1,000
+                      td
+                        span.tag.small.green Selesai
+                      td
+                        span ETA: 17 Jun 2023
+                      td
+                        span.info(data-toggle="tooltip" data-placement="right" data-original-title="Last update: 14 Jun 2023")
+                          img(src="images/icon-info.png", alt="icon")
+                    tr
+                      td
+                        .box-prdct
+                          .photo
+                            img(src="images/product-img.jpg", alt="photo")
+                          .name NTN Deep Groove Ball Bearing 6000 Series (Laher)
+                      td.text-right
+                        span 2,000
+                      td.text-right
+                        span.text-burgundy 0
+                      td.text-right
+                        span.text-green 1,000
+                      td
+                        span.tag.small.green Selesai
+                      td
+                        span ETA: 17 Jun 2023
+                      td
+                        span.info(data-toggle="tooltip" data-placement="right" data-original-title="Last update: 14 Jun 2023")
+                          img(src="images/icon-info.png", alt="icon")
 
               .btn-wrap
                 a.btn.btn-border(href='#') Download File Detail Proyek
@@ -234,7 +236,7 @@ block content
                 small.last-update Last update: 14 Jun 2023
               .right
                 span.btn.btn-link.excol Lihat detail
-                a.btn.btn-border(href='#') Follow-up proyek
+                a.btn.btn-border(href='#' data-target="#modalFollowUp" data-toggle="modal") Follow-up proyek
           .proyek-item
             .top
               .meta
@@ -279,74 +281,76 @@ block content
                     b Rp 23.680.000
             .mid
               h4 Daftar produk
-              table
-                thead
-                  tr
-                    th Produk
-                    th.text-right Qty Order
-                    th.text-right Outstanding
-                    th.text-right Delivered
-                    th Status
-                    th Tanggal
-                    th &nbsp;
-                tbody
-                  tr
-                    td
-                      .box-prdct
-                        .photo
-                          img(src="images/product-img.jpg", alt="photo")
-                        .name NTN Deep Groove Ball Bearing 6000 Series (Laher)
-                    td.text-right
-                      span 2,000
-                    td.text-right
-                      span.text-burgundy -1,000
-                    td.text-right
-                      span.text-green 1,000
-                    td
-                      span.tag.small.ondelivery On-Delivery
-                    td
-                      span ETA: 17 Jun 2023
-                    td
-                      span.info(data-toggle="tooltip" data-placement="right" data-original-title="Last update: 14 Jun 2023")
-                        img(src="images/icon-info.png", alt="icon")
-                  tr
-                    td
-                      .box-prdct
-                        .photo
-                          img(src="images/product-img.jpg", alt="photo")
-                        .name NTN Deep Groove Ball Bearing 6000 Series (Laher)
-                    td.text-right
-                      span 2,000
-                    td.text-right
-                      span.text-burgundy 0
-                    td.text-right
-                      span.text-green 1,000
-                    td
-                      span.tag.small.green Selesai
-                    td
-                      span ETA: 17 Jun 2023
-                    td
-                      span.info(data-toggle="tooltip" data-placement="right" data-original-title="Last update: 14 Jun 2023")
-                        img(src="images/icon-info.png", alt="icon")
-                  tr
-                    td
-                      .box-prdct
-                        .photo
-                          img(src="images/product-img.jpg", alt="photo")
-                        .name NTN Deep Groove Ball Bearing 6000 Series (Laher)
-                    td.text-right
-                      span 2,000
-                    td.text-right
-                      span.text-burgundy 0
-                    td.text-right
-                      span.text-green 1,000
-                    td
-                      span.tag.small.green Selesai
-                    td
-                      span ETA: 17 Jun 2023
-                    td
-                      span.info(data-toggle="tooltip" data-placement="right" data-original-title="Last update: 14 Jun 2023")
-                        img(src="images/icon-info.png", alt="icon")
+              .table
+                table
+                  thead
+                    tr
+                      th Produk
+                      th.text-right Qty Order
+                      th.text-right Outstanding
+                      th.text-right Delivered
+                      th Status
+                      th Tanggal
+                      th &nbsp;
+                  tbody
+                    tr
+                      td
+                        .box-prdct
+                          .photo
+                            img(src="images/product-img.jpg", alt="photo")
+                          .name NTN Deep Groove Ball Bearing 6000 Series (Laher)
+                      td.text-right
+                        span 2,000
+                      td.text-right
+                        span.text-burgundy -1,000
+                      td.text-right
+                        span.text-green 1,000
+                      td
+                        span.tag.small.ondelivery On-Delivery
+                      td
+                        span ETA: 17 Jun 2023
+                      td
+                        span.info(data-toggle="tooltip" data-placement="right" data-original-title="Last update: 14 Jun 2023")
+                          img(src="images/icon-info.png", alt="icon")
+                    tr
+                      td
+                        .box-prdct
+                          .photo
+                            img(src="images/product-img.jpg", alt="photo")
+                          .name NTN Deep Groove Ball Bearing 6000 Series (Laher)
+                      td.text-right
+                        span 2,000
+                      td.text-right
+                        span.text-burgundy 0
+                      td.text-right
+                        span.text-green 1,000
+                      td
+                        span.tag.small.green Selesai
+                      td
+                        span ETA: 17 Jun 2023
+                      td
+                        span.info(data-toggle="tooltip" data-placement="right" data-original-title="Last update: 14 Jun 2023")
+                          img(src="images/icon-info.png", alt="icon")
+                    tr
+                      td
+                        .box-prdct
+                          .photo
+                            img(src="images/product-img.jpg", alt="photo")
+                          .name NTN Deep Groove Ball Bearing 6000 Series (Laher)
+                      td.text-right
+                        span 2,000
+                      td.text-right
+                        span.text-burgundy 0
+                      td.text-right
+                        span.text-green 1,000
+                      td
+                        span.tag.small.green Selesai
+                      td
+                        span ETA: 17 Jun 2023
+                      td
+                        span.info(data-toggle="tooltip" data-placement="right" data-original-title="Last update: 14 Jun 2023")
+                          img(src="images/icon-info.png", alt="icon")
+
               .btn-wrap
                 a.btn.btn-border(href='#') Download File Detail Proyek
                 a.btn.btn-border(href='#') Download File Bukti Pembayaran
@@ -355,7 +359,7 @@ block content
                 small.last-update Last update: 14 Jun 2023
               .right
                 span.btn.btn-link.excol Lihat detail
-                a.btn.btn-border.disabled(href='#') Follow-up proyek
+                a.btn.btn-border.disabled(href='#' data-target="#modalFollowUp" data-toggle="modal") Follow-up proyek
           .proyek-item
             .top
               .meta
@@ -480,5 +484,33 @@ block content
                 small.last-update Last update: 14 Jun 2023
               .right
                 span.btn.btn-link.excol Lihat detail
-                a.btn.btn-border.disabled(href='#') Follow-up proyek
+                a.btn.btn-border.disabled(href='#' data-target="#modalFollowUp" data-toggle="modal") Follow-up proyek
+
+block modal
+  #modalFollowUp.modal.modalFollowUp.fade(tabindex="-1" role="dialog")
+    .modal-dialog.modal-dialog-centered.modal-md(role="document")
+      .modal-content
+        a.modal-close(href="#0" data-dismiss="modal" aria-label="Close")
+          img.svg(src="images/ic-cross.svg", alt="icon")
+        .modal-body
+          h3 Follow up Proyek Dima Rama Sakti-BTPNS
+          p Silakan isi form di bawah ini untuk follow-up kelanjutan status proyek Anda. Tim kami akan menghubungi Anda kembali segera setelah menerima pesan follow-up berikut.
+          form
+            .form-wrapper
+              .form-group
+                label Produk yang akan difollow-up
+                .custom-control.custom-checkbox
+                  input#type1.custom-control-input(type='checkbox')
+                  label.custom-control-label(for='type1') NTN Deep Groove Ball Bearing 6000 Series (Laher)
+                .custom-control.custom-checkbox
+                  input#type2.custom-control-input(type='checkbox')
+                  label.custom-control-label(for='type2') NTN Deep Groove Ball Bearing 5000 Series (Laher)
+                .custom-control.custom-checkbox
+                  input#type3.custom-control-input(type='checkbox')
+                  label.custom-control-label(for='type3') NTN Deep Groove Ball Bearing 4000 Series (Laher)
+              .form-group
+                label Pesan
+                textarea.form-control(placeholder="Tulis pesan di sini" rows="5")
+              .form-action.text-right
+                button.btn.btn-primary.small(type="button") Kirim pesan
 

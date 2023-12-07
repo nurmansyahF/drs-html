@@ -1,0 +1,46 @@
+extends templates/layout.pug
+
+block vars
+  - var activepage = "search-results";
+  - var headerType = "";
+  -
+    var product = [
+      {
+        name: "NTN Deep Groove Ball Bearing 6000 Series (Laher)",
+        price: "19.000",
+        discount: "",
+        discountedprice: "",
+        img: "home-product-thumbnail-2.jpg",
+        moq: "100",
+      },
+      {
+        name: "NTN Deep Groove Ball Bearing 6000 Series (Laher)",
+        price: "19.000",
+        discount: "",
+        discountedprice: "",
+        img: "home-product-thumbnail-2.jpg",
+        moq: "100",
+      },
+    ]
+
+  include templates/dbcontent.pug
+
+
+block content
+  .searchresults
+    section.section
+      .section-title
+        .container
+          .row
+            .col-lg-9
+              h1 Hasil pencarian “bearing”
+              .sub-desc
+                p Menampilkan total <b>2 produk</b>
+      .container
+        .produk-wrap
+          .row
+            each item in product
+              .col-lg-3.col-md-6
+                +productCard(item)
+        //- .notfound
+        //-   p Tidak ditemukan produk yang cocok dengan kata kunci pencarian Anda tersebut.

@@ -24,8 +24,22 @@
     h2
       color: $dark
       margin-bottom: rem(8)
+      &:last-child
+        margin-bottom: 0
     .subdesc
       color: $slate
+
+  +maxtablet()
+    padding: rem(48) 0
+    &.xl,
+    &.md,
+    &.sm
+      padding: 48px 0
+  +mobile
+    &-title
+      margin-bottom: 24px
+.mb-4
+  margin-bottom: rem(16)
 
 .text-center
   text-align: center
@@ -39,6 +53,7 @@
   text-align: center
   transition: all .3s ease-in-out
   border: 0
+  border-radius: 0
   outline: none
   box-shadow: none
   display: inline-block
@@ -148,6 +163,7 @@ button.btn
     border-color: #B86314
     background: #FDF2E8
 
+
 // Product Card
 .product-card
   max-width: rem(302)
@@ -157,11 +173,13 @@ button.btn
   display: block
   &-img
     +imgBg(100% 0 0)
+    border-bottom: 1px solid $light
   &-text
     padding: rem(16)
     background: $white
   &-price
     display: flex
+    flex-wrap: wrap
     align-items: center
     gap: 4px
     small
@@ -188,7 +206,14 @@ button.btn
     color: $dark
     margin-bottom: rem(24)
     min-height: rem(48)
-    display: block
+    // display: block
+    // --max-lines: 2
+    // max-height: calc(1.5rem * var(--max-lines))
+    // overflow: hidden
+    // position: relative
+    // &::after
+    //   content: "..."
+    //   display: inline
     &:hover
       color: $primary
       text-decoration: none
@@ -220,12 +245,27 @@ button.btn
           background-repeat: no-repeat
           path
             fill: transparent
+  +maxtablet
+    max-width: 100%
+  +mobile
+    &-price
+      display: block
+      b
+        min-width: 100px
+
 
 .text
   &-burgundy
     color: $burgundy
   &-green
     color: rgba(23, 184, 20, 1)
+
+.whatsapp
+  z-index: 9999
+  bottom: rem(40) !important
+  +mobile
+    right: 24px !important
+    bottom: 24px !important
 
 // CTA
 .section-cta
@@ -258,6 +298,23 @@ button.btn
         border-bottom: 1px solid $white
         .icon
           transform: translateX(#{rem(10)})
+  +maxtablet
+    padding: 56px 40px
+    .cta
+      &-link
+        border-bottom: 1px solid $white
+        .icon
+          display: none
+  +mobile
+    padding: 48px 24px
+    .cta
+      &-title
+        margin-bottom: 16px
+      &-link
+        font-size: 28px
+        display: block
+        .icon
+          display: none
 
 .autoplay-progress
 	position: absolute
@@ -355,4 +412,55 @@ button.btn
     .next-slider
       margin-right: rem(-12)
 
-
+.accordion
+  &-group
+    &:not(:last-child)
+      margin-bottom: rem(0)
+    h2
+      margin-bottom: rem(32)
+    .panel
+      border-bottom: 1px solid #E6E8E9
+      padding: 0
+      padding-bottom: rem(24)
+      transition: all .3s ease-in-out
+      border-radius: 0
+      &:not(:last-child)
+        margin-bottom: rem(16)
+      &-heading
+        h4
+          padding-bottom: 0
+          transition: all .3s ease-in-out
+          margin-bottom: 8px
+          a
+            color: $primary
+            &:hover
+              text-decoration: none
+      &-collapse
+        padding-bottom: 0
+        transition: all .3s ease-in-out
+        &.show
+          .panel-body
+            // padding-top: 8px
+      &-title
+        a
+          width: 100%
+          padding-right: rem(64)
+          display: block
+          position: relative
+          color: $blue
+          &:after
+            font-size: 24px
+            line-height: 1em
+            content: "-"
+            position: absolute
+            top: 0
+            right: 0
+            font-size: rem(24)
+            line-height: rem(24)
+          &.collapsed
+            color: $dark
+            &:after
+              content: "+"
+      &-body
+        p
+          color: $slate

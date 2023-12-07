@@ -4,7 +4,7 @@ block vars
   - var activepage = "produk";
   - var headerType = "";
   -
-    var kategori = ["Part Mekanis", "Kelistrikan", "Komponen IT", "Peralatan Rumah tangga", "Oli & Pelumas", "Sekrup,baut,mur", "Perkakas", "Alat Tulis Kantor", "Special Offer"];
+    var kategori = ["Part Mekanis", "Kelistrikan", "Komponen IT", "Peralatan Rumah tangga", "Oli & Pelumas", "Sekrup,baut,mur", "Perkakas", "Alat Tulis Kantor", "Special Offer", "Ten Offer", "Eleven Offer"];
     var product = [
       {
         name: "Baut Mur Putih Full Drat Pack Kecil",
@@ -181,20 +181,32 @@ block content
           h1 Eksplorasi pilihan produk untuk kebutuhan bisnis Anda
         .produk-kategori
           .container
-            .produk-kategori-wrap
-              each item,index in kategori
-                if(index == 0)
-                  a.kategori-item.active(href="#") Semua
-                else
-                  a.kategori-item(href="#")=item
+            //- .produk-kategori-wrap
+            //-   each item,index in kategori
+            //-     if(index == 0)
+            //-       a.kategori-item.active(href="#") Semua
+            //-     else
+            //-       a.kategori-item(href="#")=item
+            .produk-kategori-wrap.swiperCategory
+              .swiper-button-prev
+              .box-swiper
+                .swiper-wrapper
+                  each item,index in kategori
+                    if(index == 0)
+                      a.swiper-slide.kategori-item.active(href="#") Semua
+                    else
+                      a.swiper-slide.kategori-item(href="#")=item
+              .swiper-button-next
     section.section.xl.produk-list
       .container
         .produk-list-filter
           .row.justify-content-between
-            .col-lg-3
+            .col-lg-3.col-md-6
               .total
                 span Menampilkan total <b>50 produk</b>
-            .col-lg-5
+            .col-lg-5.col-md-6
+              .filter.filter-mobile
+                span Filter berdasarkan:
               .filter
                 span Urutkan berdasarkan:
                 select.select(title="Urutkan Berdasarkan")

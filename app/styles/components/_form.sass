@@ -38,6 +38,12 @@ label
       .sh-pwd
         background: url(../images/ic-hide-pw.svg) no-repeat center
         background-size: contain
+  .notes
+    font-size: 12px
+    line-height: 150%
+    color: $muted
+    display: block
+    margin-top: 8px
 
 
 
@@ -49,6 +55,7 @@ label
   line-height: 24px
   width: 100%
   display: block
+  border-radius: 0
   &:not(textarea)
     height: rem(40)
   &:focus,
@@ -58,13 +65,32 @@ label
     box-shadow: none
   &::-webkit-input-placeholder
     color: $muted
-    line-height: 0
+    // line-height: 0
   &:-ms-input-placeholder
     color: $muted
-    line-height: 0
+    // line-height: 0
   &::placeholder
     color: $muted
-    line-height: 0
+    // line-height: 0
   &[disabled]
     border: 1px solid #E5E5E5
     background: #E6E8E9
+
+
+.custom-control
+  & + .custom-control
+    margin-top: 8px
+  &-label
+    +font-400
+    &::before
+      border-radius: 0 !important
+      background: #FFF
+      border: 1px solid #CFD1D1
+  &-input:active ~ .custom-control-label::before
+    background-color: $primary !important
+    border-color: $primary
+
+.custom-checkbox .custom-control-input:checked ~ .custom-control-label::before
+  background-color: $primary !important
+  border-color: $primary
+

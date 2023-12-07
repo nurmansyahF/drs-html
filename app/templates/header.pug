@@ -29,6 +29,7 @@ header.header(id="header" class=headerType =="alt"? "header-alt":"")
                 li
                   a(href="#") Alat Tulis Kantor
 
+
           .menu-item(class=activepage =="tentang-kami"? "active":"")
             a(href="tentang-kami.html") Tentang Kami
           .menu-item(class=activepage =="galeri"? "active":"")
@@ -37,9 +38,25 @@ header.header(id="header" class=headerType =="alt"? "header-alt":"")
             a(href="kishatara.html") KISHATARA
           .menu-item(class=activepage =="kontak-kami"? "active":"")
             a(href="kontak-kami.html") Kontak Kami
+          .showmobile
+            .header-search
+              form.searchform(action="search-results.html")
+                input.form-control(type="text" placeholder="Cari disini...")
+              .sc-trigger
+                img.icon-search.svg(src=headerType =="alt"? "images/icon-search-white.svg":"images/icon-search.svg", alt="icon")
+          .showmobile
+            a.btn.btn-primary.header-btnauth(href="login.html")
+              img.svg(src=headerType =="alt"? "images/ic-user-white.svg":"images/ic-user-blue.svg"  , alt="icon")
+              span Login Customer
+          .showmobile.profile
+            .ppuser
+              span B
+
+            a.btn-link(href="#") Logout
+
       .header-right
         .header-search
-          form.searchform(action="#")
+          form.searchform(action="search-results.html")
             input.form-control(type="text" placeholder="Cari disini...")
           .sc-trigger
             img.icon-search.svg(src=headerType =="alt"? "images/icon-search-white.svg":"images/icon-search.svg", alt="icon")
@@ -48,10 +65,10 @@ header.header(id="header" class=headerType =="alt"? "header-alt":"")
           span Login Customer
         .header-logedinuser
           .ppuser
-            img(src="images/pp-user.svg", alt="ppuser")
+            //- img(src="images/pp-user.svg", alt="ppuser")
+            span B
 
       .mobile-menu
-        span
         span
         span
 

@@ -39,20 +39,32 @@
                   <div class="menu-item"><a href="galeri.html">Galeri</a></div>
                   <div class="menu-item"><a href="kishatara.html">KISHATARA</a></div>
                   <div class="menu-item"><a href="kontak-kami.html">Kontak Kami</a></div>
+                  <div class="showmobile">
+                    <div class="header-search">
+                      <form class="searchform" action="search-results.html">
+                        <input class="form-control" type="text" placeholder="Cari disini..."/>
+                      </form>
+                      <div class="sc-trigger"><img class="icon-search svg" src="images/icon-search.svg" alt="icon"/></div>
+                    </div>
+                  </div>
+                  <div class="showmobile"><a class="btn btn-primary header-btnauth" href="login.html"><img class="svg" src="images/ic-user-blue.svg" alt="icon"/><span>Login Customer</span></a></div>
+                  <div class="showmobile profile">
+                    <div class="ppuser"><span>B</span></div><a class="btn-link" href="#">Logout</a>
+                  </div>
                 </nav>
               </div>
               <div class="header-right">
                 <div class="header-search">
-                  <form class="searchform" action="#">
+                  <form class="searchform" action="search-results.html">
                     <input class="form-control" type="text" placeholder="Cari disini..."/>
                   </form>
                   <div class="sc-trigger"><img class="icon-search svg" src="images/icon-search.svg" alt="icon"/></div>
                 </div><a class="header-btnauth" href="login.html"><img class="svg" src="images/ic-user-blue.svg" alt="icon"/><span>Login Customer</span></a>
                 <div class="header-logedinuser">
-                  <div class="ppuser"><img src="images/pp-user.svg" alt="ppuser"/></div>
+                  <div class="ppuser"><span>B</span></div>
                 </div>
               </div>
-              <div class="mobile-menu"><span></span><span></span><span></span></div>
+              <div class="mobile-menu"><span></span><span></span></div>
             </div>
           </div>
         </header>
@@ -66,7 +78,13 @@
                 </div>
                 <div class="produk-kategori">
                   <div class="container">
-                    <div class="produk-kategori-wrap"><a class="kategori-item active" href="#">Semua</a><a class="kategori-item" href="#">Kelistrikan</a><a class="kategori-item" href="#">Komponen IT</a><a class="kategori-item" href="#">Peralatan Rumah tangga</a><a class="kategori-item" href="#">Oli &amp; Pelumas</a><a class="kategori-item" href="#">Sekrup,baut,mur</a><a class="kategori-item" href="#">Perkakas</a><a class="kategori-item" href="#">Alat Tulis Kantor</a><a class="kategori-item" href="#">Special Offer</a>
+                    <div class="produk-kategori-wrap swiperCategory">
+                      <div class="swiper-button-prev"></div>
+                      <div class="box-swiper">
+                        <div class="swiper-wrapper"><a class="swiper-slide kategori-item active" href="#">Semua</a><a class="swiper-slide kategori-item" href="#">Kelistrikan</a><a class="swiper-slide kategori-item" href="#">Komponen IT</a><a class="swiper-slide kategori-item" href="#">Peralatan Rumah tangga</a><a class="swiper-slide kategori-item" href="#">Oli &amp; Pelumas</a><a class="swiper-slide kategori-item" href="#">Sekrup,baut,mur</a><a class="swiper-slide kategori-item" href="#">Perkakas</a><a class="swiper-slide kategori-item" href="#">Alat Tulis Kantor</a><a class="swiper-slide kategori-item" href="#">Special Offer</a><a class="swiper-slide kategori-item" href="#">Ten Offer</a><a class="swiper-slide kategori-item" href="#">Eleven Offer</a>
+                        </div>
+                      </div>
+                      <div class="swiper-button-next"></div>
                     </div>
                   </div>
                 </div>
@@ -76,10 +94,11 @@
               <div class="container">
                 <div class="produk-list-filter">
                   <div class="row justify-content-between">
-                    <div class="col-lg-3">
+                    <div class="col-lg-3 col-md-6">
                       <div class="total"><span>Menampilkan total <b>50 produk</b></span></div>
                     </div>
-                    <div class="col-lg-5">
+                    <div class="col-lg-5 col-md-6">
+                      <div class="filter filter-mobile"><span>Filter berdasarkan:</span></div>
                       <div class="filter"><span>Urutkan berdasarkan:</span>
                         <select class="select" title="Urutkan Berdasarkan">
                           <option value="0">Update terbaru</option>
@@ -378,7 +397,7 @@
                 <div class="col-lg-8">
                   <div class="footer-right">
                     <div class="row justify-content-between">
-                      <div class="col-lg-7">
+                      <div class="col-lg-7 col-md-8">
                         <div class="footer-menu">
                           <div class="menu-group"><b>Produk</b>
                             <ul class="col2">
@@ -401,12 +420,12 @@
                           </div>
                         </div>
                       </div>
-                      <div class="col-lg-5">
+                      <div class="col-lg-5 col-md-4">
                         <div class="footer-address">
                           <address>Perumahan SBS, jl semeru utama blok A3 no.1. Bekasi utara. 17124</address>
                           <div class="contact-item"><a href="tel:+021 6828 8377">+021 6828 8377</a><small>08:00 - 18:00, Senin - Jumat</small></div>
                           <div class="contact-item"><a href="mailto:headoffice@dimaramasakti.co.id">headoffice@dimaramasakti.co.id</a><small>Untuk informasi lebih lengkap</small></div>
-                          <div class="footer-socmed"><a href="#" target="_blank"><img src="images/ic-socmed-1.svg" alt="ic-socmed"/></a><a href="#" target="_blank"><img src="images/ic-socmed-2.svg" alt="ic-socmed"/></a><a href="#" target="_blank"><img src="images/ic-socmed-3.svg" alt="ic-socmed"/></a><a href="#" target="_blank"><img src="images/ic-socmed-4.svg" alt="ic-socmed"/></a></div>
+                          <div class="footer-socmed"><a href="#" target="_blank"><img src="images/ic-socmed-1.svg" alt="ic-socmed"/></a><a href="#" target="_blank"><img src="images/ic-socmed-2.svg" alt="ic-socmed"/></a><a href="#" target="_blank"><img src="images/ic-socmed-3.svg" alt="ic-socmed"/></a><a href="#" target="_blank"><img src="images/ic-socmed-4.svg" alt="ic-socmed"/></a><a href="#" target="_blank"><img src="images/ic-tokped.svg" alt="ic-socmed"/></a><a href="#" target="_blank"><img src="images/ic-shoopee.svg" alt="ic-socmed"/></a></div>
                         </div>
                       </div>
                     </div>

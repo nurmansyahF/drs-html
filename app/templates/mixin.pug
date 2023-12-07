@@ -20,5 +20,14 @@ mixin productCard(data)
 				img.svg.icon-arrow(src="images/ic-arrow-circle-blue.svg", alt="ic")
 
 
-
-
+//- Mixin Expan Collapse
+mixin accordion(id, ...titles)
+	.panel-group.faq-accordion(id=id role='tablist' aria-multiselectable='false')
+		each title, n in titles
+			.panel.panel-default
+				.panel-heading(id=`heading-${n}` role='tab')
+					h4.panel-title
+						a(role='button' data-toggle='collapse' data-parent=`#${id}` href=`#${id}-${n}` aria-controls=id class=n>0?"collapsed":{})&attributes(n===0?{'aria-expanded':'true'}:{'aria-expanded':'false'})= title
+				.panel-collapse.collapse(id=`${id}-${n}` role='tabpanel' aria-labelledby=`heading-${n}` data-parent=`#${id}` class=n===0?"in show":{})
+					.panel-body
+						p Ya, kami menyediakan layanan purna jual yang komprehensif. Jika Anda mengalami masalah atau memerlukan bantuan setelah pembelian, tim dukungan pelanggan kami siap membantu Anda dengan pertanyaan, perbaikan, atau perawatan yang diperlukan. Kami berusaha untuk memastikan kepuasan pelanggan kami dalam setiap tahap pengalaman.

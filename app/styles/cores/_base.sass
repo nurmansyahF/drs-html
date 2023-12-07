@@ -5,7 +5,8 @@
 
 @media (min-width: 768px)
   .container
-    max-width: 720px
+    max-width: 100%
+    padding: 0 40px
 
 @media (min-width: 992px)
   .container
@@ -26,10 +27,14 @@
     padding-right: 92px
 
   +tablet
+    padding-left: 40px
+    padding-right: 40px
     &-plt
       padding-left: 5%
       padding-right: 5%
   +mobile
+    padding-left: 24px
+    padding-right: 24px
     &-plt
       padding-left: 24px
       padding-right: 24px
@@ -74,11 +79,16 @@ h1
   &.large
     font-size: rem(64)
     line-height: 1.2em
+  +mobile
+    font-size: 36px
+
 
 h2,
 .h2
   font-size: rem(36) // rem(48) // 2.5rem
   line-height: 120%
+  +mobile
+    font-size: 28px
 
 
 h3
@@ -202,24 +212,24 @@ article
   ul, ol
     margin: 0 0 2rem
     padding-left: 1.5rem
-    list-style: none
-    counter-reset: item
+    // list-style: none
+    // counter-reset: item
     &:last-child
       margin: 0
     li
       margin-bottom: .75rem
-      list-style: none
+      // list-style: none
       position: relative
-      &::before
-        content: counter(item) "."
-        counter-increment: item
-        color: $slate
-        +font-400()
-        position: absolute
-        top: 0
-        left: rem(-20)
-      &:last-child
-        margin: 0
+      // &::before
+      //   content: counter(item) "."
+      //   counter-increment: item
+      //   color: $slate
+      //   +font-400()
+      //   position: absolute
+      //   top: 0
+      //   left: rem(-20)
+      // &:last-child
+      //   margin: 0
 
     &[style="list-style-type: lower-alpha;"]
       li
@@ -295,7 +305,7 @@ html, body
   text-rendering: optimizeLegibility
   -webkit-font-smoothing: antialiased
 
-  +mtablet
+  +mobile
     font-size: 14px
     line-height: 1.5em
 

@@ -52,12 +52,12 @@
                 <div class="header-btnauth"><a href="login.html"><img class="svg" src="images/ic-user-white.svg" alt="icon"/><span>Login Customer</span></a></div>
                 <div class="header-logedinuser">
                   <div class="dropdown">
-                    <div class="ppuser dropdown-toggle" id="ddUser" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="images/pp-user.svg" alt="ppuser"/></div>
+                    <div class="ppuser dropdown-toggle" id="ddUser" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span>B</span></div>
                     <div class="dropdown-menu" aria-labelledby="dropdownMenuButton"><a class="dropdown-item" href="login.html">Logout</a></div>
                   </div>
                 </div>
               </div>
-              <div class="mobile-menu"><span></span><span></span><span></span></div>
+              <div class="mobile-menu"><span></span><span></span></div>
             </div>
           </div>
         </header>
@@ -76,7 +76,7 @@
               <div class="container">
                 <div class="section-title">
                   <h2>Daftar proyek BTPNS</h2>
-                </div>
+                </div><span class="label-mobile">Filter berdasarkan:</span>
                 <div class="proyek-status"><a class="status-tab active" href="#"><img class="icon svg" src="images/icon-status-1.svg" alt="icon"/><span>Semua status</span></a><a class="status-tab" href="#"><img class="icon svg" src="images/icon-status-2.svg" alt="icon"/><span>On-Progress</span></a><a class="status-tab" href="#"><img class="icon svg" src="images/icon-status-3.svg" alt="icon"/><span>Invoicing</span></a><a class="status-tab" href="#"><img class="icon svg" src="images/icon-status-4.svg" alt="icon"/><span>Selesai</span></a></div>
                 <div class="proyek-list-wrap">
                   <div class="proyek-filter">
@@ -133,68 +133,70 @@
                     </div>
                     <div class="mid">
                       <h4>Daftar produk</h4>
-                      <table>
-                        <thead>
-                          <tr>
-                            <th>Produk</th>
-                            <th class="text-right">Qty Order</th>
-                            <th class="text-right">Outstanding</th>
-                            <th class="text-right">Delivered</th>
-                            <th>Status</th>
-                            <th>Tanggal</th>
-                            <th>&nbsp;</th>
-                          </tr>
-                        </thead>
-                        <tbody>
-                          <tr>
-                            <td>
-                              <div class="box-prdct">
-                                <div class="photo"><img src="images/product-img.jpg" alt="photo"/></div>
-                                <div class="name">NTN Deep Groove Ball Bearing 6000 Series (Laher)</div>
-                              </div>
-                            </td>
-                            <td class="text-right"><span>2,000</span></td>
-                            <td class="text-right"><span class="text-burgundy">-1,000</span></td>
-                            <td class="text-right"><span class="text-green">1,000</span></td>
-                            <td><span class="tag small ondelivery">On-Delivery</span></td>
-                            <td><span>ETA: 17 Jun 2023</span></td>
-                            <td><span class="info" data-toggle="tooltip" data-placement="right" data-original-title="Last update: 14 Jun 2023"><img src="images/icon-info.png" alt="icon"/></span></td>
-                          </tr>
-                          <tr>
-                            <td>
-                              <div class="box-prdct">
-                                <div class="photo"><img src="images/product-img.jpg" alt="photo"/></div>
-                                <div class="name">NTN Deep Groove Ball Bearing 6000 Series (Laher)</div>
-                              </div>
-                            </td>
-                            <td class="text-right"><span>2,000</span></td>
-                            <td class="text-right"><span class="text-burgundy">0</span></td>
-                            <td class="text-right"><span class="text-green">1,000</span></td>
-                            <td><span class="tag small green">Selesai</span></td>
-                            <td><span>ETA: 17 Jun 2023</span></td>
-                            <td><span class="info" data-toggle="tooltip" data-placement="right" data-original-title="Last update: 14 Jun 2023"><img src="images/icon-info.png" alt="icon"/></span></td>
-                          </tr>
-                          <tr>
-                            <td>
-                              <div class="box-prdct">
-                                <div class="photo"><img src="images/product-img.jpg" alt="photo"/></div>
-                                <div class="name">NTN Deep Groove Ball Bearing 6000 Series (Laher)</div>
-                              </div>
-                            </td>
-                            <td class="text-right"><span>2,000</span></td>
-                            <td class="text-right"><span class="text-burgundy">0</span></td>
-                            <td class="text-right"><span class="text-green">1,000</span></td>
-                            <td><span class="tag small green">Selesai</span></td>
-                            <td><span>ETA: 17 Jun 2023</span></td>
-                            <td><span class="info" data-toggle="tooltip" data-placement="right" data-original-title="Last update: 14 Jun 2023"><img src="images/icon-info.png" alt="icon"/></span></td>
-                          </tr>
-                        </tbody>
-                      </table>
+                      <div class="table">
+                        <table>
+                          <thead>
+                            <tr>
+                              <th>Produk</th>
+                              <th class="text-right">Qty Order</th>
+                              <th class="text-right">Outstanding</th>
+                              <th class="text-right">Delivered</th>
+                              <th>Status</th>
+                              <th>Tanggal</th>
+                              <th>&nbsp;</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td>
+                                <div class="box-prdct">
+                                  <div class="photo"><img src="images/product-img.jpg" alt="photo"/></div>
+                                  <div class="name">NTN Deep Groove Ball Bearing 6000 Series (Laher)</div>
+                                </div>
+                              </td>
+                              <td class="text-right"><span>2,000</span></td>
+                              <td class="text-right"><span class="text-burgundy">-1,000</span></td>
+                              <td class="text-right"><span class="text-green">1,000</span></td>
+                              <td><span class="tag small ondelivery">On-Delivery</span></td>
+                              <td><span>ETA: 17 Jun 2023</span></td>
+                              <td><span class="info" data-toggle="tooltip" data-placement="right" data-original-title="Last update: 14 Jun 2023"><img src="images/icon-info.png" alt="icon"/></span></td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <div class="box-prdct">
+                                  <div class="photo"><img src="images/product-img.jpg" alt="photo"/></div>
+                                  <div class="name">NTN Deep Groove Ball Bearing 6000 Series (Laher)</div>
+                                </div>
+                              </td>
+                              <td class="text-right"><span>2,000</span></td>
+                              <td class="text-right"><span class="text-burgundy">0</span></td>
+                              <td class="text-right"><span class="text-green">1,000</span></td>
+                              <td><span class="tag small green">Selesai</span></td>
+                              <td><span>ETA: 17 Jun 2023</span></td>
+                              <td><span class="info" data-toggle="tooltip" data-placement="right" data-original-title="Last update: 14 Jun 2023"><img src="images/icon-info.png" alt="icon"/></span></td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <div class="box-prdct">
+                                  <div class="photo"><img src="images/product-img.jpg" alt="photo"/></div>
+                                  <div class="name">NTN Deep Groove Ball Bearing 6000 Series (Laher)</div>
+                                </div>
+                              </td>
+                              <td class="text-right"><span>2,000</span></td>
+                              <td class="text-right"><span class="text-burgundy">0</span></td>
+                              <td class="text-right"><span class="text-green">1,000</span></td>
+                              <td><span class="tag small green">Selesai</span></td>
+                              <td><span>ETA: 17 Jun 2023</span></td>
+                              <td><span class="info" data-toggle="tooltip" data-placement="right" data-original-title="Last update: 14 Jun 2023"><img src="images/icon-info.png" alt="icon"/></span></td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
                       <div class="btn-wrap"><a class="btn btn-border" href="#">Download File Detail Proyek</a><a class="btn btn-border" href="#">Download File Bukti Pembayaran</a></div>
                     </div>
                     <div class="bottom">
                       <div class="left"><small class="last-update">Last update: 14 Jun 2023</small></div>
-                      <div class="right"><span class="btn btn-link excol">Lihat detail</span><a class="btn btn-border" href="#">Follow-up proyek</a></div>
+                      <div class="right"><span class="btn btn-link excol">Lihat detail</span><a class="btn btn-border" href="#" data-target="#modalFollowUp" data-toggle="modal">Follow-up proyek</a></div>
                     </div>
                   </div>
                   <div class="proyek-item">
@@ -243,68 +245,70 @@
                     </div>
                     <div class="mid">
                       <h4>Daftar produk</h4>
-                      <table>
-                        <thead>
-                          <tr>
-                            <th>Produk</th>
-                            <th class="text-right">Qty Order</th>
-                            <th class="text-right">Outstanding</th>
-                            <th class="text-right">Delivered</th>
-                            <th>Status</th>
-                            <th>Tanggal</th>
-                            <th>&nbsp;</th>
-                          </tr>
-                        </thead>
-                        <tbody>
-                          <tr>
-                            <td>
-                              <div class="box-prdct">
-                                <div class="photo"><img src="images/product-img.jpg" alt="photo"/></div>
-                                <div class="name">NTN Deep Groove Ball Bearing 6000 Series (Laher)</div>
-                              </div>
-                            </td>
-                            <td class="text-right"><span>2,000</span></td>
-                            <td class="text-right"><span class="text-burgundy">-1,000</span></td>
-                            <td class="text-right"><span class="text-green">1,000</span></td>
-                            <td><span class="tag small ondelivery">On-Delivery</span></td>
-                            <td><span>ETA: 17 Jun 2023</span></td>
-                            <td><span class="info" data-toggle="tooltip" data-placement="right" data-original-title="Last update: 14 Jun 2023"><img src="images/icon-info.png" alt="icon"/></span></td>
-                          </tr>
-                          <tr>
-                            <td>
-                              <div class="box-prdct">
-                                <div class="photo"><img src="images/product-img.jpg" alt="photo"/></div>
-                                <div class="name">NTN Deep Groove Ball Bearing 6000 Series (Laher)</div>
-                              </div>
-                            </td>
-                            <td class="text-right"><span>2,000</span></td>
-                            <td class="text-right"><span class="text-burgundy">0</span></td>
-                            <td class="text-right"><span class="text-green">1,000</span></td>
-                            <td><span class="tag small green">Selesai</span></td>
-                            <td><span>ETA: 17 Jun 2023</span></td>
-                            <td><span class="info" data-toggle="tooltip" data-placement="right" data-original-title="Last update: 14 Jun 2023"><img src="images/icon-info.png" alt="icon"/></span></td>
-                          </tr>
-                          <tr>
-                            <td>
-                              <div class="box-prdct">
-                                <div class="photo"><img src="images/product-img.jpg" alt="photo"/></div>
-                                <div class="name">NTN Deep Groove Ball Bearing 6000 Series (Laher)</div>
-                              </div>
-                            </td>
-                            <td class="text-right"><span>2,000</span></td>
-                            <td class="text-right"><span class="text-burgundy">0</span></td>
-                            <td class="text-right"><span class="text-green">1,000</span></td>
-                            <td><span class="tag small green">Selesai</span></td>
-                            <td><span>ETA: 17 Jun 2023</span></td>
-                            <td><span class="info" data-toggle="tooltip" data-placement="right" data-original-title="Last update: 14 Jun 2023"><img src="images/icon-info.png" alt="icon"/></span></td>
-                          </tr>
-                        </tbody>
-                      </table>
+                      <div class="table">
+                        <table>
+                          <thead>
+                            <tr>
+                              <th>Produk</th>
+                              <th class="text-right">Qty Order</th>
+                              <th class="text-right">Outstanding</th>
+                              <th class="text-right">Delivered</th>
+                              <th>Status</th>
+                              <th>Tanggal</th>
+                              <th>&nbsp;</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td>
+                                <div class="box-prdct">
+                                  <div class="photo"><img src="images/product-img.jpg" alt="photo"/></div>
+                                  <div class="name">NTN Deep Groove Ball Bearing 6000 Series (Laher)</div>
+                                </div>
+                              </td>
+                              <td class="text-right"><span>2,000</span></td>
+                              <td class="text-right"><span class="text-burgundy">-1,000</span></td>
+                              <td class="text-right"><span class="text-green">1,000</span></td>
+                              <td><span class="tag small ondelivery">On-Delivery</span></td>
+                              <td><span>ETA: 17 Jun 2023</span></td>
+                              <td><span class="info" data-toggle="tooltip" data-placement="right" data-original-title="Last update: 14 Jun 2023"><img src="images/icon-info.png" alt="icon"/></span></td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <div class="box-prdct">
+                                  <div class="photo"><img src="images/product-img.jpg" alt="photo"/></div>
+                                  <div class="name">NTN Deep Groove Ball Bearing 6000 Series (Laher)</div>
+                                </div>
+                              </td>
+                              <td class="text-right"><span>2,000</span></td>
+                              <td class="text-right"><span class="text-burgundy">0</span></td>
+                              <td class="text-right"><span class="text-green">1,000</span></td>
+                              <td><span class="tag small green">Selesai</span></td>
+                              <td><span>ETA: 17 Jun 2023</span></td>
+                              <td><span class="info" data-toggle="tooltip" data-placement="right" data-original-title="Last update: 14 Jun 2023"><img src="images/icon-info.png" alt="icon"/></span></td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <div class="box-prdct">
+                                  <div class="photo"><img src="images/product-img.jpg" alt="photo"/></div>
+                                  <div class="name">NTN Deep Groove Ball Bearing 6000 Series (Laher)</div>
+                                </div>
+                              </td>
+                              <td class="text-right"><span>2,000</span></td>
+                              <td class="text-right"><span class="text-burgundy">0</span></td>
+                              <td class="text-right"><span class="text-green">1,000</span></td>
+                              <td><span class="tag small green">Selesai</span></td>
+                              <td><span>ETA: 17 Jun 2023</span></td>
+                              <td><span class="info" data-toggle="tooltip" data-placement="right" data-original-title="Last update: 14 Jun 2023"><img src="images/icon-info.png" alt="icon"/></span></td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
                       <div class="btn-wrap"><a class="btn btn-border" href="#">Download File Detail Proyek</a><a class="btn btn-border" href="#">Download File Bukti Pembayaran</a></div>
                     </div>
                     <div class="bottom">
                       <div class="left"><small class="last-update">Last update: 14 Jun 2023</small></div>
-                      <div class="right"><span class="btn btn-link excol">Lihat detail</span><a class="btn btn-border disabled" href="#">Follow-up proyek</a></div>
+                      <div class="right"><span class="btn btn-link excol">Lihat detail</span><a class="btn btn-border disabled" href="#" data-target="#modalFollowUp" data-toggle="modal">Follow-up proyek</a></div>
                     </div>
                   </div>
                   <div class="proyek-item">
@@ -418,7 +422,7 @@
                     </div>
                     <div class="bottom">
                       <div class="left"><small class="last-update">Last update: 14 Jun 2023</small></div>
-                      <div class="right"><span class="btn btn-link excol">Lihat detail</span><a class="btn btn-border disabled" href="#">Follow-up proyek</a></div>
+                      <div class="right"><span class="btn btn-link excol">Lihat detail</span><a class="btn btn-border disabled" href="#" data-target="#modalFollowUp" data-toggle="modal">Follow-up proyek</a></div>
                     </div>
                   </div>
                 </div>
@@ -445,7 +449,7 @@
                 <div class="col-lg-8">
                   <div class="footer-right">
                     <div class="row justify-content-between">
-                      <div class="col-lg-7">
+                      <div class="col-lg-7 col-md-8">
                         <div class="footer-menu">
                           <div class="menu-group"><b>Produk</b>
                             <ul class="col2">
@@ -468,12 +472,12 @@
                           </div>
                         </div>
                       </div>
-                      <div class="col-lg-5">
+                      <div class="col-lg-5 col-md-4">
                         <div class="footer-address">
                           <address>Perumahan SBS, jl semeru utama blok A3 no.1. Bekasi utara. 17124</address>
                           <div class="contact-item"><a href="tel:+021 6828 8377">+021 6828 8377</a><small>08:00 - 18:00, Senin - Jumat</small></div>
                           <div class="contact-item"><a href="mailto:headoffice@dimaramasakti.co.id">headoffice@dimaramasakti.co.id</a><small>Untuk informasi lebih lengkap</small></div>
-                          <div class="footer-socmed"><a href="#" target="_blank"><img src="images/ic-socmed-1.svg" alt="ic-socmed"/></a><a href="#" target="_blank"><img src="images/ic-socmed-2.svg" alt="ic-socmed"/></a><a href="#" target="_blank"><img src="images/ic-socmed-3.svg" alt="ic-socmed"/></a><a href="#" target="_blank"><img src="images/ic-socmed-4.svg" alt="ic-socmed"/></a></div>
+                          <div class="footer-socmed"><a href="#" target="_blank"><img src="images/ic-socmed-1.svg" alt="ic-socmed"/></a><a href="#" target="_blank"><img src="images/ic-socmed-2.svg" alt="ic-socmed"/></a><a href="#" target="_blank"><img src="images/ic-socmed-3.svg" alt="ic-socmed"/></a><a href="#" target="_blank"><img src="images/ic-socmed-4.svg" alt="ic-socmed"/></a><a href="#" target="_blank"><img src="images/ic-tokped.svg" alt="ic-socmed"/></a><a href="#" target="_blank"><img src="images/ic-shoopee.svg" alt="ic-socmed"/></a></div>
                         </div>
                       </div>
                     </div>
@@ -491,6 +495,42 @@
           </div>
         </footer>
         <div class="back-to-top"></div>
+      </div>
+    </div>
+    <div class="modal modalFollowUp fade" id="modalFollowUp" tabindex="-1" role="dialog">
+      <div class="modal-dialog modal-dialog-centered modal-md" role="document">
+        <div class="modal-content"><a class="modal-close" href="#0" data-dismiss="modal" aria-label="Close"><img class="svg" src="images/ic-cross.svg" alt="icon"/></a>
+          <div class="modal-body">
+            <h3>Follow up Proyek Dima Rama Sakti-BTPNS</h3>
+            <p>Silakan isi form di bawah ini untuk follow-up kelanjutan status proyek Anda. Tim kami akan menghubungi Anda kembali segera setelah menerima pesan follow-up berikut.</p>
+            <form>
+              <div class="form-wrapper">
+                <div class="form-group">
+                  <label>Produk yang akan difollow-up</label>
+                  <div class="custom-control custom-checkbox">
+                    <input class="custom-control-input" id="type1" type="checkbox"/>
+                    <label class="custom-control-label" for="type1">NTN Deep Groove Ball Bearing 6000 Series (Laher)</label>
+                  </div>
+                  <div class="custom-control custom-checkbox">
+                    <input class="custom-control-input" id="type2" type="checkbox"/>
+                    <label class="custom-control-label" for="type2">NTN Deep Groove Ball Bearing 5000 Series (Laher)</label>
+                  </div>
+                  <div class="custom-control custom-checkbox">
+                    <input class="custom-control-input" id="type3" type="checkbox"/>
+                    <label class="custom-control-label" for="type3">NTN Deep Groove Ball Bearing 4000 Series (Laher)</label>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label>Pesan</label>
+                  <textarea class="form-control" placeholder="Tulis pesan di sini" rows="5"></textarea>
+                </div>
+                <div class="form-action text-right">
+                  <button class="btn btn-primary small" type="button">Kirim pesan</button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
       </div>
     </div>
   </body>

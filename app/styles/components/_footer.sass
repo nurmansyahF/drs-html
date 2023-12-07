@@ -81,4 +81,34 @@
       transition: all .3s ease-in-out
       &:hover
         transform: translateY(-4px)
+  +maxtablet
+    padding: 56px 24px
+    &-top
+    &-tagline
+      margin-bottom: 24px
+  +mobile
+    padding: 48px 12px
+    &-tagline
+      font-size: 28px
+      line-height: 120%
+    &-menu
+      display: block
+      .menu-group
+        margin-bottom: 32px
+    &-right
+      .col-lg-5
+        display: block
+    &-address
+      max-width: 100%
+    &-bottom
+      flex-wrap: wrap
+      .left,
+      .right
+        flex: 0 0 100%
+        max-width: 100%
+      .left
+        order: 2
+      .right
+        order: 1
+        margin-bottom: 24px
 

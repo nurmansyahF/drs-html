@@ -93,31 +93,36 @@ block content
               - var n = 1;
               while n < 13
                 if(n == 1)
-                  .grid-item.dw(data-toggle="modal" data-target="#modalDetail")
+                  .grid-item.dw(data-toggle="modal" data-target="#modalDetail" data-index=`${n++}`)
                     img(src=`images/galeri/img-galeri-${n++}.jpg`, alt="galeri-img")
                     .content
                       h3 Proyek instalasi solar panel
                       p Proyek instalasi solar panel, Dima Rama Sakti berkontribusi dalam proses pengadaan produk solar panel bertipe XXXX
                 else if(n == 5)
-                  .grid-item.dw(data-toggle="modal" data-target="#modalDetail")
+                  .grid-item.dw(data-toggle="modal" data-target="#modalDetail" data-index=`${n++}`)
                     img(src=`images/galeri/img-galeri-${n++}.jpg`, alt="galeri-img")
                     .content
                       h3 Proyek instalasi solar panel
                       p Proyek instalasi solar panel, Dima Rama Sakti berkontribusi dalam proses pengadaan produk solar panel bertipe XXXX
                 else if(n == 7)
-                  .grid-item.dw(data-toggle="modal" data-target="#modalDetail")
+                  .grid-item.dw(data-toggle="modal" data-target="#modalDetail" data-index=`${n++}`)
                     img(src=`images/galeri/img-galeri-${n++}.jpg`, alt="galeri-img")
                     .content
                       h3 Proyek instalasi solar panel
                       p Proyek instalasi solar panel, Dima Rama Sakti berkontribusi dalam proses pengadaan produk solar panel bertipe XXXX
                 else if(n == 8)
-                  .grid-item.dw(data-toggle="modal" data-target="#modalDetail")
+                  .grid-item.dw(data-toggle="modal" data-target="#modalDetail" data-index=`${n++}`)
                     img(src=`images/galeri/img-galeri-${n++}.jpg`, alt="galeri-img")
                     .content
                       h3 Proyek instalasi solar panel
                       p Proyek instalasi solar panel, Dima Rama Sakti berkontribusi dalam proses pengadaan produk solar panel bertipe XXXX
                 else
-                  .grid-item(data-toggle="modal" data-target="#modalDetail")
+                  .grid-item(data-toggle="modal" data-target="#modalDetail" data-index=`${n++}`)
+                    img(src=`images/galeri/img-galeri-${n++}.jpg`, alt="galeri-img")
+                    .content
+                      h3 Proyek instalasi solar panel
+                      p Proyek instalasi solar panel, Dima Rama Sakti berkontribusi dalam proses pengadaan produk solar panel bertipe XXXX
+                .grid-item.sq(data-toggle="modal" data-target="#modalDetail" data-index=`${n++}`)
                     img(src=`images/galeri/img-galeri-${n++}.jpg`, alt="galeri-img")
                     .content
                       h3 Proyek instalasi solar panel
